@@ -23,8 +23,8 @@
             </li>
             <li class="site-list__item ">
               <form class="search-list__search" action="https://echo.htmlacademy.ru" method="post">
-                <input id="search-field" type="search" name="search" placeholder="Поиск:">
-                <label area-label="search" for="search-field"></label>
+                <input class="search-list__input" id="search-field" type="search" name="search" placeholder="Поиск:">
+                <label class="search-list__label" for="search-field">Поиск</label>
               </form>
             <li class="site-list__item">
               <a class="search-list__basket" href="">Корзина: пока пуста</a>
@@ -32,13 +32,14 @@
           </ul>
         </div>
         <div class="page-header__title-wrapper">
-          <h1 class="page-header__title">Милые штуки<br>ручной<br>работы для дома</b></h1>
+          <h1 class="page-header__title">Милые штуки<br>ручной<br>работы для дома<br></h1>
         </div>
       </nav>
     </header>
     <main class="page-main">
       <h2 class="visually-heading">Категори Товаров</h2>
       <section class="categories">
+        <h2 class="visually-heading">Выбор категории</h2>
         <ul class=categories__list>
           <li class="categories__item">
             <a class="categories__link categories__link--subjects" href="">Предметы интерьера</a>
@@ -68,7 +69,7 @@
               <td class="specification-table__cell">15см</td>
             </tr>
           </table>
-          <img class="products-week__image" src="https://via.placeholder.com/260x315">
+          <img class="products-week__image" src="https://via.placeholder.com/260x315" alt="Вязанные корзинки">
           <p class="products-week__price">Цена: 990 руб.</p>
           <button class="products-week__order" type="button">
             <span>Заказать</span>
@@ -77,7 +78,7 @@
       </section>
       <section class="section-about">
         <h2 class="section-about__title heading__title">Коротко о нас</h2>
-        <ul class="section-about__short about-list" about-list>
+        <ul class="section-about__short about-list">
           <li class="about-list__item about-list__item--ecology">Экологически<br>чистые материалы</li>
           <li class="about-list__item about-list__item--style">Скандинавский стиль<br>по российской цене</li>
           <li class="about-list__item about-list__item--like">Увеличивает лайки<br>на фотографиях</li>
@@ -97,7 +98,7 @@
             набирают больше лайков!
           </p>
           <span class="pruduct-rewiews__user"></span>
-          <smile class="products-reviews__login">@misssssiskras</smile>
+          <span class="products-reviews__login">@misssssiskras</span>
           <div class="products-reviews__slide">
             <button class="slide__left" type="button">Влево</button>
             <button class="slide__right" type=button>Вправо</button>
