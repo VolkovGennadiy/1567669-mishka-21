@@ -21,21 +21,23 @@
             <li class="site-list__item">
               <a class="site-list__link" href="">Вязание на заказ</a>
             </li>
+            <li class="site-list__item ">
+              <form class="search-list__search" action="https://echo.htmlacademy.ru" method="post">
+                <input id="search-field" type="search" name="search" placeholder="Поиск:">
+                <label area-label="search" for="search-field"></label>
+              </form>
+            <li class="site-list__item">
+              <a class="search-list__basket" href="">Корзина: пока пуста</a>
+            </li>
           </ul>
-          <div class="header-nav__list search-list">
-            <form class="search-list__search" action="https://echo.htmlacademy.ru" method="post">
-              <input id="serach-field" type="search" name="search" placeholder="Поиск:">
-              <label for="search-field"></label>
-            </form>
-            <a class="search-list__basket" href="">Корзина: пока пуста</a>
-          </div>
         </div>
         <div class="page-header__title-wrapper">
-          <h1 class="page-header__title heading__title">Милые штуки<br>ручной<br>работы для дома</b></h1>
+          <h1 class="page-header__title">Милые штуки<br>ручной<br>работы для дома</b></h1>
         </div>
       </nav>
     </header>
     <main class="page-main">
+      <h2 class="visually-heading">Категори Товаров</h2>
       <section class="categories">
         <ul class=categories__list>
           <li class="categories__item">
@@ -100,15 +102,15 @@
             <button class="slide__left" type="button">Влево</button>
             <button class="slide__right" type=button>Вправо</button>
           </div>
-          <button class="products-reviews__write">
-            <span class="write__button">Написать</span>
+          <button class="products-reviews__button" type="button">
+            <span class=products-reviews__write>Написать</span>
           </button>
         </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__heading">Контакты</h2>
         <table class="contacts__table">
-          <tr class="contacts-table__row">
+          <tr class="contacts-table__row contacts-table">
             <td class="contacts-table__cell">e-mail</td>
             <td class="contacts-table__cell">info@mimimishkashop.ru</td>
           </tr>
@@ -118,7 +120,7 @@
           </tr>
         </table>
         <p class="contacts-map">
-          <img class="contacts-map-image" src="https://via.placeholder.com/320x455">
+          <img class="contacts-map-image" src="https://via.placeholder.com/320x455" alt="Как нас найти">
         </p>
         <button class="contacts__write" type="button">Напишите нам</button>
       </section>
@@ -129,15 +131,15 @@
           <li class="socials__item">
             <a class="socials__link" href="">Инстаграм</a>
           </li>
-          <li class="socials__item" href="">
+          <li class="socials__item">
             <a class="socials__link" href="">Фейсбук</a>
           </li>
-          <li class="socials__item" href="">
+          <li class="socials__item">
             <a class="socials__link" href="">Твитер</a>
           </li>
         </ul>
       </div>
-      <p class="copiright__developed developed__item">Разработано</p>
+      <a class="copiright__developed copiright__developed--symbol">Разработано</a>
     </footer>
   </body>
 </html>
