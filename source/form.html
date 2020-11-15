@@ -6,7 +6,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo" href="index.html">
         <img src="https://via.placeholder.com/85x34" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="header-nav">
@@ -16,16 +16,14 @@
         <div class="header-nav__wrapper">
           <ul class="header-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="">Каталог Товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог Товаров</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="">Вязание на заказ</a>
             </li>
             <li class="site-list__item ">
-              <form class="search-list__search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="search-list__input" id="search-field" type="search" name="search" placeholder="Поиск:">
-                <label class="search-list__label" for="search-field">Поиск</label>
-              </form>
+              <a class="site-list__search">Поиск</a>
+            </li>
             <li class="site-list__item">
               <a class="search-list__basket" href="">Корзина: пока пуста</a>
             </li>
@@ -37,14 +35,14 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="page-main__order">
+      <div class="page-main__wrapper">
         <p class="page-main__description">
           Мы будем рады воплотить в жизнь<br>ваши пожелания! заполните простою<br>
           форму заказа и мы свяжемся с вами,<br>чтобы уточнить детали.
         </p>
-        <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="radio__type radio-feed">
-            <legend class="radio-feed__legend legend__text">Тип</legend>
+        <form class="page-main__form page-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="page-form radio-feed">
+            <legend class="radio-feed__legend">Тип</legend>
             <ul class="radio-feed__list">
               <li class="radio-feed__item">
                 <input class="radio-feed__input" type="radio" name="accessory" id="radio-accessory" value="radio-accessory" checked>
@@ -56,8 +54,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="checkbox__color checkbox-feed">
-            <legend class="checkbox-feed__legend legend__text">Цвет</legend>
+          <fieldset class="page-form checkbox-feed">
+            <legend class="checkbox-feed__legend">Цвет</legend>
             <ul class="checkbox-feed__list">
               <li class="checkbox-feed__item">
                 <input class="checkbox-feed__input" type="checkbox" name="white" id="white-field" checked>
@@ -85,8 +83,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="personal__info info-feed">
-            <legend class="info-feed__legend legend__text">Фио</legend>
+          <fieldset class="page-form info-feed">
+            <legend class="info-feed__legend">Фио</legend>
             <ul class="info-feed__list">
               <li class="info-feed__item">
                 <label class="info-feed__label" for=name>Имя:</label>
@@ -114,10 +112,10 @@
               </li>
             </ul>
           </fieldset>
-          <p class="form__text">*Поля обязательны к заполнению</p>
+          <p class="page-form__text">*Поля обязательны к заполнению</p>
           <button class="page-form__button" type="submit">Отправить заказ</button>
         </form>
-      </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="socials">
