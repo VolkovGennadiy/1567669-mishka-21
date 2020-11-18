@@ -3,54 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="">
-        <img src="https://via.placeholder.com/85x34" alt="Интернет-магазин «Мишка»">
-      </a>
-      <nav class="header-nav">
-        <button class="header-nav__toggle" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-        <div class="header-nav__wrapper">
-          <ul class="header-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог Товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item ">
-              <a class="site-list__search">Поиск</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__basket" href="">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-header__title-wrapper">
-          <h1 class="page-header__title">Милые штуки<br>ручной<br>работы для дома<br></h1>
-        </div>
-      </nav>
+      <div class="page-header__navigation">
+        <a class="page-header__logo" href="">
+          <img src="img/mishka-logo-mobile.svg.png" alt="Интернет-магазин «Мишка»">
+        </a>
+        <nav class="header-nav">
+          <button class="header-nav__toggle" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <div class="header-nav__wrapper">
+            <ul class="header-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог Товаров</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="site-list__item ">
+                <a class="site-list__search">Поиск</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__basket" href="">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">Милые штуки<br>ручной<br>работы для дома<br></h1>
+      </div>
     </header>
     <main class="page-main">
-      <h2 class="visually-heading">Категори Товаров</h2>
+      <h2 class="visually-hidden">Категори Товаров</h2>
       <section class="categories">
-        <h2 class="visually-heading">Выбор категории</h2>
-        <ul class=categories__list>
-          <li class="categories__item">
-            <a class="categories__link categories__link--subjects" href="">Предметы интерьера</a>
+        <h2 class="visually-hidden">Выбор категории</h2>
+        <ul class="categories__list no-bulites">
+          <li class="categories__item--subjects">
+            <a class="categories__link categories__link--subjects" href="">Предметы<br>интерьера</a>
           </li>
-          <li class="categories__item">
-            <a class="categories__link categories__link--plays" href="">Детские игрушки</a>
+          <li class="categories__item--plays">
+            <a class="categories__link categories__link--plays" href="">Детские<br>игрушки</a>
           </li>
         </ul>
       </section>
       <section class="products">
-        <h2 class="visually-heading">Карточка товара</h2>
+        <h2 class="visually-hidden">Карточка товара</h2>
         <div class="products-week">
-          <h2 class="products-week__title heading__title">Вязаные корзинки</h2>
+          <h2 class="products-week__title">Вязаные корзинки</h2>
           <h3 class="products-week__label">Товар недели</h3>
           <p class=products-week__description>Экологически чистая пряжа,<br>ручная работа. Доступны в шести<br>расцветках, и трех размерах</p>
           <table class="products-week__table specification-table">
@@ -67,7 +70,7 @@
               <td class="specification-table__cell">15см</td>
             </tr>
           </table>
-          <img class="products-week__image" src="https://via.placeholder.com/260x315" alt="Вязанные корзинки">
+          <img class="products-week__image" src="img/triple-set-mobile.jpg" alt="Вязанные корзинки">
           <p class="products-week__price">Цена: 990 руб.</p>
           <button class="products-week__order" type="button">
             <span>Заказать</span>
@@ -75,8 +78,8 @@
         </div>
       </section>
       <section class="section-about">
-        <h2 class="section-about__title heading__title">Коротко о нас</h2>
-        <ul class="section-about__short about-list">
+        <h2 class="section-about__title">Коротко о нас:</h2>
+        <ul class="section-about__short about-list no-bulites">
           <li class="about-list__item about-list__item--ecology">Экологически<br>чистые материалы</li>
           <li class="about-list__item about-list__item--style">Скандинавский стиль<br>по российской цене</li>
           <li class="about-list__item about-list__item--like">Увеличивает лайки<br>на фотографиях</li>
@@ -95,11 +98,11 @@
             и мои фотографии сразу стали<br>более стильными, а также<br>
             набирают больше лайков!
           </p>
-          <span class="pruduct-rewiews__user"></span>
-          <span class="products-reviews__login">@misssssiskras</span>
+          <span class="pruduct-rewiews__user">Анастасия Красильникова</span>
+          <small class="products-reviews__login">@misssssiskras</small>
           <div class="products-reviews__slide">
-            <button class="slide__left" type="button">Влево</button>
-            <button class="slide__right" type=button>Вправо</button>
+            <button class="slide__left" type="button"></button>
+            <button class="slide__right" type=button></button>
           </div>
           <button class="products-reviews__button" type="button">
             <span class=products-reviews__write>Написать</span>
@@ -113,7 +116,7 @@
             <td class="contacts-table__cell">e-mail</td>
             <td class="contacts-table__cell">info@mimimishkashop.ru</td>
           </tr>
-          <tr class="contacts-table__row">
+          <tr class="contacts-table__row contacts-table">
             <td class="contacts-table__cell">адрес</td>
             <td class="contacts-table__cell">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</td>
           </tr>
@@ -126,7 +129,7 @@
     </main>
     <footer class="page-footer">
       <div class="socials">
-        <ul class="socials__list">
+        <ul class="socials__list no no-bulites">
           <li class="socials__item">
             <a class="socials__link" href="">Инстаграм</a>
           </li>
