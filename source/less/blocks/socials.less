@@ -1,5 +1,4 @@
 .socials {
-  padding-left: 42px;
   padding-top: 20px;
   padding-bottom: 30px;
 }
@@ -9,6 +8,20 @@
   justify-content: space-around;
 }
 
-.copiright-developed {
-  padding-left: 42px;
+@media (min-width: @tablet-width) {
+  .socials {
+    padding-top: 30px;
+  }
+
+  .socials__list {
+    display: flex;
+
+    li {
+      padding-left: 50px;
+    }
+  }
+
+  .copiright-developed {
+    padding-top: 30px;
+  }
 }

@@ -1,5 +1,5 @@
 .products-reviews {
-  padding-left: 42px;
+  padding-left: 30px;
 }
 
 .products-reviews__title {
@@ -38,12 +38,13 @@
 }
 
 .products-reviews__slide {
-  padding: 20px 20px 13px 60px;
+  padding: 20px 10px 13px 40px;
   border: 1px solid @bord-lightgrey;
+  width: 200px;
 }
 
 .products-reviews__button {
-  padding: 16px 85px 16px 85px;
+  padding: 16px 65px 16px 65px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -52,4 +53,56 @@
   background: @basik-white;
   border: 2px solid @text-darkgrey;
   margin-top: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .products-reviews {
+
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  .pruduct-rewiews__block {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  .products-reviews__button {
+    padding: 16px 26px 16px 26px;
+    height: 52px;
+    width: 175px;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .products-reviews__text--none {
+    display: none;
+  }
+
+  .products-reviews__text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 668px;
+  }
+
+  .pruduct-rewiews__signature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products-reviews__slide {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products-reviews {
+    width: 1150px;
+    margin: 0 auto;
+  }
 }

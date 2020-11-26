@@ -1,26 +1,26 @@
 .products-week__title {
-  padding-left: 42px;
+  padding-left: 30px;
 }
 
 .products-week__label {
   color: @background-lightgreen;
-  padding-left: 42px;
+  margin-left: 30px;
 }
 
 .products-week__description {
-  padding-left: 42px;
+  padding-left: 32px;
   font-size: 15px;
   line-height: 24px;
   color: @text-darkgrey;
 }
 
 .products-week__table {
-  padding-left: 42px;
+  padding-left: 30px;
   font-size: 15px;
 }
 
 .products-week__image {
-  padding-left: 42px;
+  padding-left: 30px;
 }
 
 .products-week__price {
@@ -36,10 +36,103 @@
   background: @basik-white;
   width: 260px;
   height: 52px;
-  margin-left: 42px;
+  margin-left: 30px;
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
   text-transform: uppercase;
   color: @text-darkgrey;
+}
+
+.products-week__label--none {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .products {
+    width: 768px;
+  }
+
+  .products-week__hidden {
+    display: flex;
+    justify-content: space-between;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .products-week__title {
+    padding: 0;
+  }
+
+  .products-week__label--none {
+    display: block;
+  }
+
+  .products-week__card {
+    display: grid;
+    grid-template-columns: min-content 334px;
+    grid-template-rows: repeat(5, auto);
+    margin: 0 auto;
+    column-gap: 40px;
+    padding-left: 20px;
+  }
+
+  .products-week__description,
+  .products-week__table,
+  .products-week__price,
+  .products-week__order {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .products-week__image {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    height: 404px;
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products {
+    width: 1150px;
+  }
+
+  .products-week__hidden {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 900px;
+    gap: 60px;
+    align-items: center;
+    margin-left: 80px;
+  }
+
+  .products-week__title {
+    font-weight: bold;
+    font-size: 53px;
+    line-height: 57px;
+    z-index: 100;
+    margin: 0;
+  }
+
+  .products-week__image {
+    height: 636px;
+    width: 525px;
+    margin-top: -150px;
+  }
+
+  .products-week__price {
+    padding-top: 124px;
+  }
+
+  .products-week__table {
+    padding-top: 60px;
+  }
+
+  .products-week__card {
+    padding-left: 200px;
+  }
 }
