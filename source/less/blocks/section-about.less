@@ -14,3 +14,22 @@
 .about-list__item {
   padding-top: 83px;
 }
+
+@media (min-width: @tablet-width) {
+  .section-about__short {
+    columns: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section-about {
+    padding-left: 200px;
+  }
+
+  .section-about__short {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

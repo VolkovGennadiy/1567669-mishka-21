@@ -11,14 +11,58 @@
 .categories__link {
   color: @basik-white;
   display: block;
-  background-color: @background-lightgreen;
-  width: 290px;
-  height: 55px;
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 30px;
+  margin-left: 20px;
 }
 
-.categories__link--plays {
+.categories-item {
+  background-color: @background-lightgreen;
+  width: 320px;
+  height: 100px;
+}
+
+.categories__item--plays {
   background: @background-darkgreen;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    height: 106px;
+    width: 768px;
+  }
+
+  .categories__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .categories-item {
+    background-color: @background-lightgreen;
+    width: 334px;
+    height: 100px;
+  }
+
+  .categories__item--plays {
+    background: @background-darkgreen;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: 1150px;
+    height: 219px;
+    padding: 0;
+  }
+
+  .categories-item {
+    background-color: @background-lightgreen;
+    width: 525px;
+    height: 119px;
+  }
+
+  .categories__item--plays {
+    background: @background-darkgreen;
+  }
 }
