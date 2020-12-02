@@ -1,14 +1,38 @@
+.page-header {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__nav {
+  display: flex;
+}
+
 .page-header__logo {
-  padding-left: 120px;
+  padding-left: 116px;
+  margin-top: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header-nav__toggle {
-  margin-left: 50px;
+  margin-left: 67px;
+  background-image: url("../img/menu.svg");
+  width: 20px;
+  height: 14px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .page-header__title-wrapper {
   width: 320px;
-  height: 283px;
+  height: 278px;
   text-align: center;
   font-size: 17px;
   line-height: 30px;
@@ -16,6 +40,13 @@
   font-weight: bold;
   padding: 0;
   margin: 0;
+  background-image: url("../img/hero-mobile.jpg");
+  background-position: bottom -70px center;
+}
+
+.page-header__title {
+  padding-top: 68px;
+  letter-spacing: 1px;
 }
 
 .header-nav__list {
@@ -49,6 +80,10 @@
   }
 }
 
+.header-nav--deleviry {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: 768px;
@@ -56,18 +91,19 @@
 
   .page-header__navigation {
     width: 668px;
-    height: 200px;
+    height: 0;
     margin: 0 auto;
   }
 
   .page-header__nav {
-    margin-top: 10px;
+    margin-top: 2px;
   }
 
   .page-header__logo {
-    background-image: url("../../img/mishka-logo-tablet.png");
+    background-image: url("../img/mishka-logo-tablet.png");
     background-repeat: no-repeat;
     padding-bottom: 52px;
+    margin-left: -2px;
   }
 
   .page-header__img {
@@ -79,7 +115,7 @@
   }
 
   .header-nav {
-    margin-top: -20px;     /*Временно*/
+    margin-top: -95px;     /*Временно*/
   }
 
   .header-nav__list {
@@ -88,22 +124,66 @@
   }
 
   .site-list__item {
-    padding-top: 10px;
     padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 24px;
   }
 
   .site-list__item--search {
     order: -1;
-    margin-left: 360px;
+    margin-left: 356px;
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    margin-top: 56px;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 360px;
+      padding-right: 20px;
+      margin-top: -2px;
+    }
+  }
+
+  .site-list__search--span {
+    display: none;
   }
 
   .site-list__item--basket {
     order: -1;
+    margin-left: 90px;
+    font-size: 17px;
+    line-height: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 21px;
+      height: 18px;
+      background-image: url("../img/cart.svg");
+      left: -30px;
+      top: 56px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 74px;
+      margin-top: -60px;
+    }
+  }
+
+  .site-list__item--catalog {
+    margin-top: -35px;
+    margin-left: -20px;
+  }
+
+  .site-list__item--knitting {
+    margin-top: -35px;
+    margin-left: 18px;
   }
 
   .page-header__title-wrapper {
     width: 768px;
-    height: 283px;
+    height: 746px;
     text-align: center;
     font-size: 23px;
     line-height: 50px;
@@ -111,9 +191,20 @@
     font-weight: bold;
     padding: 0;
     margin: 0;
+    background-image: url("../img/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    margin-top: -10px;
   }
 
-  .page-header__title--none {
+  .page-header__title {
+    padding-top: 214px;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 50px;
+    letter-spacing: 0.1px;
+  }
+
+  .paragraph-none {
     display: none;
   }
 
@@ -121,27 +212,39 @@
   .site-list__item--new {
     display: none;
   }
+
+  .header-nav--deleviry {
+    display: block;
+    text-align: end;
+    font-size: 15px;
+    line-height: 24px;
+    color: @text-darkgrey;
+    margin-top: -25px;
+
+    @media (min-width: @desktop-width) {
+      margin-right: 52px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: 1150px;
-    margin: 0;
-    padding: 0;
   }
 
   .page-header__navigation {
     width: 1150px;
-    height: 200px;
     margin: 0 auto;
   }
 
   .page-header__logo {
-    background-image: url("../../img/mishka-logo-desktop.svg");
+    background-image: url("../img/mishka-logo-desktop.svg");
     background-repeat: no-repeat;
-    padding-right: 60px;
+    width: 149px;
+    height: 72px;
     text-align: center;
     margin-left: 500px;
+    margin-top: 7px;
   }
 
   .header-nav__list {
@@ -151,15 +254,21 @@
   .site-list__item--catalog {
     order: -4;
     margin-left: 30px;
+    margin-top: -60px;
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .site-list__item--knitting {
     order: -3;
+    margin-top: -60px;
+    margin-left: 50px;
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .site-list__item--search {
     order: -2;
-    margin-left: 470px;
   }
 
   .site-list__item--sale,
@@ -169,11 +278,25 @@
 
   .site-list__item--new {
     margin-left: 30px;
+    margin-top: -38px;
+  }
+
+  .site-list__item--sale {
+    margin-left: 42px;
+    margin-top: -38px;
   }
 
   .page-header__title-wrapper {
     width: 1150px;
-    height: 283px;
+    height: 746px;
     text-align: center;
+    background-image: url("../img/hero-desktop-full.jpg");
+    margin-top: -28px;
+  }
+
+  .page-header__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 228px;
   }
 }
