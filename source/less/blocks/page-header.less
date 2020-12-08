@@ -62,21 +62,55 @@
 
 .page-header__title--form {
   width: 320px;
-  height: 150px;
-  padding-top: 40px;
+  height: 124px;
+  padding-top: 55px;
   background-color: @background-grey;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 22px;
   text-align: center;
+  margin-top: 16px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 768px;
     margin: 0 auto;
+    margin-top: 86px;
+    height: 150px;
+    padding-top: 75px;
+    font-size: 29px;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 768px;
+      height: 24px;
+      background-image: url("../../img/zigzag-fill-desktop.svg");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 214px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1150px;
     margin: 0 auto;
+    padding-top: 66px;
+    margin-top: 86px;
+    font-size: 35px;
+    line-height: 40px;
+    height: 186px;
+    z-index: -1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1150px;
+      height: 24px;
+      background-image: url("../../img/zigzag-fill-desktopfulls.svg");
+      background-repeat: no-repeat;
+      top: 238px;
+    }
   }
 }
 

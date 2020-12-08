@@ -28,7 +28,9 @@
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item site-list__item--search">
-              <a class="site-list__search">Поиск</a>
+              <a class="site-list__search" href="">
+                <span class="site-list__search--span">Поиск</span>
+              </a>
             </li>
             <li class="site-list__item site-list__item--basket">
               <a class="site-list__basket" href="">Корзина: пока пуста</a>
@@ -40,18 +42,18 @@
               <a class="site-list__basket" href="">Распродажа</a>
             </li>
           </ul>
+          <span class="header-nav--deleviry">Бесплатная доставка по России</span>
         </nav>
       </div>
       <div class="page-header__title--form">
-        <h1 class="page-header__title">Вязание на заказ</h1>
+        <h2 class="page-header__form">Вязание на заказ</h2>
       </div>
-      </nav>
     </header>
     <main class="page-main">
       <div class="page-main__wrapper">
         <p class="page-main__description">
-          Мы будем рады воплотить в жизнь<br class="page-main__description--none">ваши пожелания! Заполните простою<br>
-          форму заказа и мы свяжемся с вами,<br class="page-main__description--none">чтобы уточнить детали.
+          Мы будем рады воплотить в жизнь<br class="page-main__description--none"> ваши пожелания! Заполните простую<br class="text-none">
+          форму <br class="text-none--write">заказа и мы свяжемся с вами,<br class="page-main__description--none"> чтобы уточнить детали.
         </p>
         <form class="page-main__form page-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="page-form radio-feed">
@@ -88,7 +90,7 @@
               </li>
               <li class="checkbox-feed__item">
                 <input class="checkbox-feed__input" type="checkbox" name="pink" id="pink-field">
-                <label class="checkbox-feed__label" for="pink-field">«Тиффани»</label>
+                <label class="checkbox-feed__label" for="pink-field">Розовый</label>
               </li>
               <li class="checkbox-feed__item">
                 <input class="checkbox-feed__input" type="checkbox" name="orange" id="orange-field">
@@ -105,11 +107,11 @@
               </li>
               <li class="info-feed__item">
                 <label class="info-feed__label info-feed__label--personal" for=surname>Фамилия:</label>
-                <input class="info-feed__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+                <input class="info-feed__input info-feed--famely" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
               </li>
               <li class="info-feed__item">
                 <label class="info-feed__label info-feed__label--personal" for=patronymic>Отчество:</label>
-                <input class="info-feed__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+                <input class="info-feed__input info-feed__input--patronomic" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </fieldset>
@@ -121,7 +123,7 @@
             </div>
           </fieldset>
           <fieldset class="page-form email-feed">
-            <p class="tell-feed__legend legend-text">e-mail</p>
+            <p class="email-feed__legend legend-text">e-mail</p>
             <div class="email-feed__item">
               <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
               <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
@@ -131,30 +133,39 @@
             <p class="add-feed__legend legend-text">Доп</p>
             <div class="add-feed__item">
               <label class="add-feed__label add-feed__label--contacts" for=add>Доп</label>
-              <textarea class="add-feed__input add-feed__input--wish" id="add" name="add" placeholder="Опишите ваши пожелания к заказу"></textarea>
+              <textarea class="add-feed__input add-feed__input--wish" id="add" name="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <fieldset class="page-footer__submit">
-            <p class="page-form__text">*Поля обязательны к заполнению</p>
+            <p class="page-form__text">*Поля обязательны для заполнения</p>
             <button class="page-form__button" type="submit">Отправить заказ</button>
           </fieldset>
         </form>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer-form">
       <div class="socials">
+        <a class=socials__logo>
+          <span class="visually-hidden">Лого</span>
+        </a>
         <ul class="socials__list no no-bulites">
           <li class="socials__item">
-            <a class="socials__link" href="">Инстаграм</a>
+            <a class="socials__link socials__link--inst" href="">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Фейсбук</a>
+            <a class="socials__link socials__link--fb" href="">
+              <span class="visually-hidden" >Фейсбук</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Твитер</a>
+            <a class="socials__link socials__link--twitter" href="">
+              <span class="visually-hidden">Твитер</span>
+            </a>
           </li>
         </ul>
+        <a class="copiright-developed" href="">Разработано</a>
       </div>
-      <a class="copiright-developed copiright-developed--symbol" href="">Разработано</a>
     </footer>
   </body>

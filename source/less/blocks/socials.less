@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: space-between;
   height: 50px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+  }
 }
 
 .socials__list {
@@ -115,6 +119,7 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
+  padding-top: 80px;
 
   &::before {
     content: "";
@@ -122,8 +127,8 @@
     background-image: url("../img/htmlacademy.svg");
     width: 27px;
     height: 34px;
-    left: 156px;
-    top: -5px;
+    left: 154px;
+    top: 72px;
     opacity: 0.8;
   }
 
@@ -133,6 +138,10 @@
 
   &:active::before {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
   }
 }
 
