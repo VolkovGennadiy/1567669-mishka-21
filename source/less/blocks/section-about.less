@@ -23,8 +23,8 @@
       background-image: url("../img/zigzag-desktop.svg");
       width: 1050px;
       height: 24px;
-      top: 13px;
-      left: 50px;
+      top: 70px;
+      left: 75px;
     }
   }
 
@@ -34,9 +34,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: left auto;
-    padding-left: 224px;
+    margin: 0 auto;
     padding-top: 35px;
+    width: 1150px;
+    height: 670px;
   }
 }
 
@@ -52,6 +53,7 @@
 .section-about__short {
   color: @basik-black;
   font-weight: 700;
+  list-style-type: none;
 }
 
 .about-list__item {
@@ -168,7 +170,7 @@
 @media (min-width: @tablet-width) {
   .section-about__short {
     display: grid;
-    grid-template-columns: 335px auto;
+    grid-template-columns: 335px 335px;
     grid-template-rows: repeat(3, auto);
   }
 
@@ -183,12 +185,13 @@
 @media (min-width: @desktop-width) {
   .section-about__short {
     column-gap: 16px;
-    margin-top: 10px;
+    padding-left: 200px;
   }
 
   .section-about__title {
-    padding-top: 24px;
+    padding-top: 81px;
     font-size: 53px;
     line-height: 57px;
+    padding-left: 200px;
   }
 }
