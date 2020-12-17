@@ -1,25 +1,18 @@
 .page-footer {
   background: @background-grey;
-  width: 320px;
-  height: 150px;
-  margin: 0 auto;
-}
+  margin-top: 41px;
 
-@media (min-width: @tablet-width) {
-  .page-footer {
-    width: 768px;
+  @media (min-width: @tablet-width) {
     margin-top: 57px;
   }
 
-  .page-footer-form {
-    margin-top: -13px;
+  @media (min-width: @desktop-width) {
+    margin-top: 81px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-footer {
-    display: flex;
-    width: 1150px;
-    justify-content: space-between;
+@media (min-width: @tablet-width) {
+  .page-footer-form {
+    margin-top: -13px;
   }
 }

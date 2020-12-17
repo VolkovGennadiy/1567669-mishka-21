@@ -1,6 +1,20 @@
 .page-header {
+  width: 100%;
+}
+
+.page-header__navigation {
   width: 320px;
+  height: 77px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
 }
 
 .page-header__nav {
@@ -31,22 +45,62 @@
 }
 
 .page-header__title-wrapper {
-  width: 320px;
-  height: 278px;
-  text-align: center;
-  font-size: 17px;
-  line-height: 30px;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-  background-image: url("../img/hero-mobile.jpg");
-  background-position: bottom -70px center;
+  background-color: @background-header;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 86px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 86px;
+  }
+
+  &--container {
+    background-image: url("../img/hero-mobile.jpg");
+    background-position: bottom 133px center;
+    background-repeat: no-repeat;
+    height: 489px;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/hero-desktop.jpg");
+      height: 752px;
+      background-position: bottom 5px center;
+    }
+  }
 }
 
 .page-header__title {
-  padding-top: 68px;
-  letter-spacing: 1px;
+  padding-top: 51px;
+  text-align: center;
+  font-size: 27px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+
+  .paragraphf-none {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 120px;
+    font-size: 43px;
+    line-height: 50px;
+
+    .paragraphf-none {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 114px;
+  }
 }
 
 .header-nav__list {
@@ -58,21 +112,28 @@
   font-size: 17px;
   line-height: 24px;
   padding-top: 55px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .page-header__title--form {
-  width: 320px;
   height: 124px;
   padding-top: 55px;
   background-color: @background-grey;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  margin-top: 16px;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    width: 768px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 86px;
     height: 150px;
@@ -83,20 +144,20 @@
     &::before {
       content: "";
       position: absolute;
-      width: 768px;
+      width: 100%;
       height: 24px;
       background-image: url("../img/zigzag-fill-desktop.svg");
-      background-repeat: no-repeat;
+      background-repeat: repeat-x;
       left: 0;
       top: 214px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
+    width: 100%;
     margin: 0 auto;
     padding-top: 66px;
-    margin-top: 86px;
+    margin-top: 87px;
     font-size: 35px;
     line-height: 40px;
     height: 186px;
@@ -105,10 +166,10 @@
     &::before {
       content: "";
       position: absolute;
-      width: 1150px;
+      width: 100%;
       height: 24px;
       background-image: url("../img/zigzag-fill-desktopfulls.svg");
-      background-repeat: no-repeat;
+      background-repeat: repeat-x;
       top: 238px;
     }
   }
@@ -119,25 +180,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    width: 768px;
-  }
-
-  .page-header__navigation {
-    width: 668px;
-    height: 0;
-    margin: 0 auto;
-  }
-
   .page-header__nav {
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .page-header__logo {
     background-image: url("../img/mishka-logo-tablet.png");
     background-repeat: no-repeat;
-    padding-bottom: 52px;
-    margin-left: -2px;
+    padding-bottom: 50px;
+    margin-left: 48px;
   }
 
   .page-header__img {
@@ -149,7 +200,11 @@
   }
 
   .header-nav {
-    margin-top: -95px;     /*Временно*/
+    margin-top: -95px;
+
+    @media (min-width: @desktop-width) {
+      margin-top: -92px;
+    }
   }
 
   .header-nav__list {
@@ -166,15 +221,38 @@
 
   .site-list__item--search {
     order: -1;
-    margin-left: 356px;
-    background-image: url("../img/search.svg");
+    margin-left: 348px;
+    margin-top: 5px;
+  }
+
+  .site-list__search {
+    position: relative;
+    margin-left: 36px;
     background-repeat: no-repeat;
-    margin-top: 56px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-image: url("../../img/search.svg");
+      filter: brightness(0);
+      opacity: 0.2;
+    }
+
+    &:hover::before {
+      filter: brightness(1);
+      opacity: 1;
+    }
+
+    &:active {
+      filter: brightness(1);
+      opacity: 0.3;
+    }
 
     @media (min-width: @desktop-width) {
-      margin-left: 360px;
-      padding-right: 20px;
-      margin-top: -2px;
+      margin-left: -8px;
+      margin-top: 22px;
     }
   }
 
@@ -184,58 +262,51 @@
 
   .site-list__item--basket {
     order: -1;
-    margin-left: 90px;
+    margin-left: 514px;
     font-size: 17px;
     line-height: 24px;
     position: relative;
+    margin-top: -82px;
 
     &::before {
       content: "";
-      position: absolute;
+      display: inline-block;
       width: 21px;
       height: 18px;
       background-image: url("../img/cart.svg");
-      left: -30px;
-      top: 56px;
+      margin-right: 26px;
+      filter: brightness(0);
+      opacity: 0.2;
+    }
+
+    &:hover::before {
+      filter: brightness(1);
+      opacity: 1;
+    }
+
+    &:active::before {
+      filter: brightness(1);
+      opacity: 0.2;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-left: 465px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 74px;
+      margin-left: 47px;
       margin-top: -60px;
     }
   }
 
   .site-list__item--catalog {
-    margin-top: -35px;
-    margin-left: -20px;
+    margin-top: -5px;
+    margin-left: 30px;
   }
 
   .site-list__item--knitting {
-    margin-top: -35px;
-    margin-left: 18px;
-  }
-
-  .page-header__title-wrapper {
-    width: 768px;
-    height: 746px;
-    text-align: center;
-    font-size: 23px;
-    line-height: 50px;
-    font-style: normal;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    background-image: url("../img/hero-desktop.jpg");
-    background-repeat: no-repeat;
-    margin-top: -10px;
-  }
-
-  .page-header__title {
-    padding-top: 214px;
-    font-weight: bold;
-    font-size: 43px;
-    line-height: 50px;
-    letter-spacing: 0.1px;
+    margin-top: -5px;
+    margin-left: 16px;
   }
 
   .paragraph-none {
@@ -253,7 +324,8 @@
     font-size: 15px;
     line-height: 24px;
     color: @text-darkgrey;
-    margin-top: -25px;
+    margin-top: -27px;
+    margin-right: 50px;
 
     @media (min-width: @desktop-width) {
       margin-right: 52px;
@@ -262,15 +334,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    width: 1150px;
-  }
-
-  .page-header__navigation {
-    width: 1150px;
-    margin: 0 auto;
-  }
-
   .page-header__logo {
     background-image: url("../img/mishka-logo-desktop.svg");
     background-repeat: no-repeat;
@@ -288,14 +351,14 @@
   .site-list__item--catalog {
     order: -4;
     margin-left: 30px;
-    margin-top: -60px;
+    margin-top: -58px;
     font-size: 17px;
     line-height: 24px;
   }
 
   .site-list__item--knitting {
     order: -3;
-    margin-top: -60px;
+    margin-top: -58px;
     margin-left: 50px;
     font-size: 17px;
     line-height: 24px;
@@ -303,6 +366,7 @@
 
   .site-list__item--search {
     order: -2;
+    margin-top: -58px;
   }
 
   .site-list__item--sale,
@@ -312,25 +376,11 @@
 
   .site-list__item--new {
     margin-left: 30px;
-    margin-top: -38px;
+    margin-top: -3px;
   }
 
   .site-list__item--sale {
     margin-left: 42px;
-    margin-top: -38px;
-  }
-
-  .page-header__title-wrapper {
-    width: 1150px;
-    height: 746px;
-    text-align: center;
-    background-image: url("../img/hero-desktop-full.jpg");
-    margin-top: -28px;
-  }
-
-  .page-header__title {
-    font-size: 53px;
-    line-height: 57px;
-    padding-top: 228px;
+    margin-top: -3px;
   }
 }

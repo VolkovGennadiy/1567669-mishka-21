@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="page-header__navigation">
         <div class="page-header__nav">
-          <a class="page-header__logo" href="">
+          <a class="page-header__logo" href="index.html">
             <picture>
               <img class="page-header__img" src="img/mishka-logo-mobile.svg.png" alt="Интернет-магазин «Мишка»">
             </picture>
@@ -36,10 +36,10 @@
               <a class="site-list__basket" href="">Корзина: пока пуста</a>
             </li>
             <li class="site-list__item site-list__item--new">
-              <a class="site-list__basket" href="">Новые поступления</a>
+              <a class="site-list__link" href="">Новые поступления</a>
             </li>
             <li class="site-list__item site-list__item--sale">
-              <a class="site-list__basket" href="">Распродажа</a>
+              <a class="site-list__link" href="">Распродажа</a>
             </li>
           </ul>
           <span class="header-nav--deleviry">Бесплатная доставка по России</span>
@@ -60,43 +60,45 @@
             <p class="radio-feed__legend legend-text">Тип</p>
             <ul class="radio-feed__list no-bulites">
               <li class="radio-feed__item">
-                <input class="radio-feed__input" type="radio" name="accessory" id="radio-accessory" value="radio-accessory" checked>
+                <input class="radio-feed__input" type="radio" name="radiotype" id="radio-accessory" value="radio-accessory" checked>
                 <label class="radio-feed__label" for="radio-accessory">Аксессуар для интерьера</label>
               </li>
               <li class="radio-feed__item">
-                <input class="radio-feed__input" type="radio" name="childplay" id="radio-childplay" value="radio-childplay">
+                <input class="radio-feed__input" type="radio" name="radiotype" id="radio-childplay" value="radio-childplay">
                 <label class="radio-feed__label" for="radio-childplay">Детская игрушка</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="page-form checkbox-feed">
-            <p class="checkbox-feed__legend legend-text">Цвет</p>
-            <ul class="checkbox-feed__list no-bulites">
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="white" id="white-field" checked>
-                <label class="checkbox-feed__label" for="white-field">Белый</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="grey" id="grey-field" checked>
-                <label class="checkbox-feed__label" for="grey-field">Серый</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="tiffany" id="tiffany-field">
-                <label class="checkbox-feed__label" for="tiffany-field">«Тиффани»</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="black" id="black-field">
-                <label class="checkbox-feed__label" for="black-field">Черный</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="pink" id="pink-field">
-                <label class="checkbox-feed__label" for="pink-field">Розовый</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="orange" id="orange-field">
-                <label class="checkbox-feed__label" for="orange-field">Оранжевый</label>
-              </li>
-            </ul>
+            <div class="checkbox-feed__wrapper">
+              <p class="checkbox-feed__legend legend-text">Цвет</p>
+              <ul class="checkbox-feed__list no-bulites">
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="white" id="white-field" checked>
+                  <label class="checkbox-feed__label" for="white-field">Белый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="grey" id="grey-field" checked>
+                  <label class="checkbox-feed__label" for="grey-field">Серый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="tiffany" id="tiffany-field">
+                  <label class="checkbox-feed__label" for="tiffany-field">«Тиффани»</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="black" id="black-field">
+                  <label class="checkbox-feed__label" for="black-field">Черный</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="pink" id="pink-field">
+                  <label class="checkbox-feed__label" for="pink-field">Розовый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="orange" id="orange-field">
+                  <label class="checkbox-feed__label" for="orange-field">Оранжевый</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <fieldset class="page-form info-feed">
             <p class="info-feed__legend legend-text">Фио</p>
@@ -115,20 +117,22 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="page-form tell-feed">
-            <p class="tell-feed__legend legend-text">Тел</p>
-            <div class="tell-feed__item">
-              <label class="tell-feed__label tell-feed__label--contacts" for=phone>Тел</label>
-              <input class="tell-feed__input tell-feed__input--phone" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*">
-            </div>
-          </fieldset>
-          <fieldset class="page-form email-feed">
-            <p class="email-feed__legend legend-text">e-mail</p>
-            <div class="email-feed__item">
-              <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
-              <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
-            </div>
-          </fieldset>
+          <div class="tell-feed_wrapper">
+            <fieldset class="page-form tell-feed">
+              <p class="tell-feed__legend legend-text">Тел</p>
+              <div class="tell-feed__item">
+                <label class="tell-feed__label tell-feed__label--contacts" for=phone>Тел</label>
+                <input class="tell-feed__input tell-feed__input--phone" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*">
+              </div>
+            </fieldset>
+            <fieldset class="page-form email-feed">
+              <p class="email-feed__legend legend-text">e-mail</p>
+              <div class="email-feed__item">
+                <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
+                <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="page-form add-feed">
             <p class="add-feed__legend legend-text">Доп</p>
             <div class="add-feed__item">
@@ -169,3 +173,4 @@
       </div>
     </footer>
   </body>
+</html>
