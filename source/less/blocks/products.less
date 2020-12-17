@@ -1,3 +1,8 @@
+.products {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .products-week__hidden {
   display: flex;
   flex-direction: column;
@@ -5,7 +10,15 @@
 
 .products-week__title {
   padding-left: 29px;
-  margin-top: 34px;
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .products-week__label {
@@ -16,6 +29,26 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-top: -13px;
+
+  .paragraphf-none {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -25px;
+
+    .paragraphf-none {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .paragraphf-none {
+      display: block;
+    }
+
+    margin-top: -12px;
+  }
 }
 
 .products-week__description {
@@ -23,6 +56,12 @@
   font-size: 15px;
   line-height: 24px;
   color: @text-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 1px;
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
 }
 
 .products-week__table {
@@ -33,6 +72,10 @@
 .specification-table__cell {
   padding-top: 12px;
   padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 15px;
+  }
 }
 
 .products-week__image {
@@ -61,19 +104,6 @@
   text-transform: uppercase;
   color: @text-darkgrey;
   margin-top: 6px;
-
-  &:hover {
-    background-color: @text-darkgrey;
-    color: @basik-white;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.paragraphf-none {
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,7 +117,7 @@
     justify-content: space-between;
     width: 668px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 27px;
   }
 
   .products-week__label {
@@ -96,13 +126,6 @@
     padding-top: 6px;
     line-height: 17px;
     text-align: center;
-  }
-
-  .products-week__title {
-    padding: 0;
-    font-weight: bold;
-    font-size: 43px;
-    line-height: 50px;
   }
 
   .products-week__label--none {
@@ -116,12 +139,6 @@
     margin: 0 auto;
     column-gap: 40px;
     padding-left: 20px;
-  }
-
-  .products-week__description {
-    margin-top: 1px;
-    line-height: 30px;
-    letter-spacing: 0.3px;
   }
 
   .products-week__description,
@@ -172,7 +189,8 @@
     width: 900px;
     gap: 60px;
     align-items: center;
-    margin-left: 64px;
+    margin-left: 63px;
+    margin-top: 100px;
   }
 
   .products-week__title {
@@ -191,11 +209,6 @@
     margin-top: 36px;
     margin-left: -5px;
     letter-spacing: 1px;
-  }
-
-  .specification-table__cell {
-    padding-left: 25px;
-    margin-right: 5px;
   }
 
   .products-week__image {

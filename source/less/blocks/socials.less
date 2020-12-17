@@ -1,31 +1,46 @@
 .socials {
-  padding-top: 30px;
-  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 50px;
+  justify-content: space-around;
+  width: 320px;
+  min-height: 146px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    align-items: center;
+    margin-top: 2px;
+    min-height: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    gap: 146px;
+  }
 }
 
 .socials__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 15px;
 }
 
 .socials__item {
   position: relative;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 6px;
+  }
 }
 
-.socials__link--inst {
-  position: absolute;
+.socials__link {
+  display: inline-block;
   background-image: url("../img/insta.svg");
-  width: 22px;
-  height: 21px;
   padding: 22px;
-  top: -2px;
-  left: 36px;
   background-repeat: no-repeat;
   filter: brightness(0);
+  background-position: center;
 
   &:hover {
     filter: brightness(1);
@@ -34,97 +49,41 @@
   &:active {
     filter: brightness(1);
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    top: 27px;
-    left: 42px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 52px;
-    left: 230px;
   }
 }
 
 .socials__link--fb {
-  position: absolute;
+  display: inline-block;
   background-image: url("../img/fb.svg");
-  width: 22px;
-  height: 21px;
-  padding: 22px;
-  top: -5px;
-  left: -7px;
-  background-repeat: no-repeat;
-  filter: brightness(0);
-
-  &:hover {
-    filter: brightness(1);
-  }
-
-  &:active {
-    filter: brightness(1);
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    top: 24px;
-    left: 104px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 49px;
-    left: 292px;
-  }
 }
 
 .socials__link--twitter {
-  position: absolute;
+  display: inline-block;
   background-image: url("../img/twitter.svg");
-  width: 22px;
-  height: 21px;
-  padding: 22px;
-  top: -1px;
-  left: -58px;
-  background-repeat: no-repeat;
-  filter: brightness(0);
-
-  &:hover {
-    filter: brightness(1);
-  }
-
-  &:active {
-    filter: brightness(1);
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    top: 28px;
-    left: 159px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 51px;
-    left: 350px;
-  }
 }
 
 .copiright-developed {
+  display: flex;
   position: relative;
   margin-left: 70px;
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
+  gap: 27px;
+  align-items: center;
+  padding-bottom: 16px;
 
-  &::before {
+  &::after {
     content: "";
-    position: absolute;
+    display: inline-block;
     background-image: url("../img/htmlacademy.svg");
     width: 27px;
     height: 34px;
-    left: 156px;
-    top: -5px;
     opacity: 0.8;
+
+    @media (min-width: @desktop-width) {
+      top: -7px;
+    }
   }
 
   &:hover {
@@ -133,6 +92,10 @@
 
   &:active::before {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
   }
 }
 
@@ -143,34 +106,54 @@
     background-image: url("../img/logo-footer.svg");
     width: 102px;
     height: 34px;
-    margin-top: 21px;
-    margin-left: 50px;
-    margin-right: 80px;
-    filter: brightness(0);
+    margin-top: -5px;
+    filter: brightness(1);
+    background-repeat: no-repeat;
+    margin-right: 62px;
+    margin-left: 1px;
+
+    &:hover {
+      filter: brightness(0);
+    }
+
+    &:active {
+      filter: brightness(1);
+      opacity: 0.2;
+    }
 
     @media (min-width: @desktop-width) {
-      margin-left: 50px;
-      margin-top: 46px;
+      margin-top: 2px;
+      margin-left: -2px;
+      padding-right: 40px;
     }
   }
 
   .socials {
     flex-direction: row;
-    justify-content: unset;
+    justify-content: space-evenly;
+
+    @media (min-width: @desktop-width) {
+      width: 1150px;
+      margin: 0 auto;
+    }
   }
 
   .socials__list {
-    padding-top: 80px;
-    flex-direction: row-reverse;
+    flex-direction: row;
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      gap: 14px;
+    }
   }
 
   .copiright-developed {
-    margin-left: 305px;
-    margin-top: 30px;
+    margin-top: 2px;
+    margin-left: 60px;
 
     @media (min-width: @desktop-width) {
-      margin-left: 684px;
-      margin-top: 54px;
+      margin-top: 1px;
+      margin-left: 107px;
     }
   }
 }

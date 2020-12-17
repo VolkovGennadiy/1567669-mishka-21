@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="page-header__navigation">
         <div class="page-header__nav">
-          <a class="page-header__logo" href="">
+          <a class="page-header__logo" href="index.html">
             <picture>
               <img class="page-header__img" src="img/mishka-logo-mobile.svg.png" alt="Интернет-магазин «Мишка»">
             </picture>
@@ -28,73 +28,77 @@
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item site-list__item--search">
-              <a class="site-list__search">Поиск</a>
+              <a class="site-list__search" href="">
+                <span class="site-list__search--span">Поиск</span>
+              </a>
             </li>
             <li class="site-list__item site-list__item--basket">
               <a class="site-list__basket" href="">Корзина: пока пуста</a>
             </li>
             <li class="site-list__item site-list__item--new">
-              <a class="site-list__basket" href="">Новые поступления</a>
+              <a class="site-list__link" href="">Новые поступления</a>
             </li>
             <li class="site-list__item site-list__item--sale">
-              <a class="site-list__basket" href="">Распродажа</a>
+              <a class="site-list__link" href="">Распродажа</a>
             </li>
           </ul>
+          <span class="header-nav--deleviry">Бесплатная доставка по России</span>
         </nav>
       </div>
       <div class="page-header__title--form">
-        <h1 class="page-header__title">Вязание на заказ</h1>
+        <h2 class="page-header__form">Вязание на заказ</h2>
       </div>
-      </nav>
     </header>
     <main class="page-main">
       <div class="page-main__wrapper">
         <p class="page-main__description">
-          Мы будем рады воплотить в жизнь<br class="page-main__description--none">ваши пожелания! Заполните простою<br>
-          форму заказа и мы свяжемся с вами,<br class="page-main__description--none">чтобы уточнить детали.
+          Мы будем рады воплотить в жизнь<br class="page-main__description--none"> ваши пожелания! Заполните простую<br class="text-none">
+          форму <br class="text-none--write">заказа и мы свяжемся с вами,<br class="page-main__description--none"> чтобы уточнить детали.
         </p>
         <form class="page-main__form page-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="page-form radio-feed">
             <p class="radio-feed__legend legend-text">Тип</p>
             <ul class="radio-feed__list no-bulites">
               <li class="radio-feed__item">
-                <input class="radio-feed__input" type="radio" name="accessory" id="radio-accessory" value="radio-accessory" checked>
+                <input class="radio-feed__input" type="radio" name="radiotype" id="radio-accessory" value="radio-accessory" checked>
                 <label class="radio-feed__label" for="radio-accessory">Аксессуар для интерьера</label>
               </li>
               <li class="radio-feed__item">
-                <input class="radio-feed__input" type="radio" name="childplay" id="radio-childplay" value="radio-childplay">
+                <input class="radio-feed__input" type="radio" name="radiotype" id="radio-childplay" value="radio-childplay">
                 <label class="radio-feed__label" for="radio-childplay">Детская игрушка</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="page-form checkbox-feed">
-            <p class="checkbox-feed__legend legend-text">Цвет</p>
-            <ul class="checkbox-feed__list no-bulites">
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="white" id="white-field" checked>
-                <label class="checkbox-feed__label" for="white-field">Белый</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="grey" id="grey-field" checked>
-                <label class="checkbox-feed__label" for="grey-field">Серый</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="tiffany" id="tiffany-field">
-                <label class="checkbox-feed__label" for="tiffany-field">«Тиффани»</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="black" id="black-field">
-                <label class="checkbox-feed__label" for="black-field">Черный</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="pink" id="pink-field">
-                <label class="checkbox-feed__label" for="pink-field">«Тиффани»</label>
-              </li>
-              <li class="checkbox-feed__item">
-                <input class="checkbox-feed__input" type="checkbox" name="orange" id="orange-field">
-                <label class="checkbox-feed__label" for="orange-field">Оранжевый</label>
-              </li>
-            </ul>
+            <div class="checkbox-feed__wrapper">
+              <p class="checkbox-feed__legend legend-text">Цвет</p>
+              <ul class="checkbox-feed__list no-bulites">
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="white" id="white-field" checked>
+                  <label class="checkbox-feed__label" for="white-field">Белый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="grey" id="grey-field" checked>
+                  <label class="checkbox-feed__label" for="grey-field">Серый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="tiffany" id="tiffany-field">
+                  <label class="checkbox-feed__label" for="tiffany-field">«Тиффани»</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="black" id="black-field">
+                  <label class="checkbox-feed__label" for="black-field">Черный</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="pink" id="pink-field">
+                  <label class="checkbox-feed__label" for="pink-field">Розовый</label>
+                </li>
+                <li class="checkbox-feed__item">
+                  <input class="checkbox-feed__input" type="checkbox" name="orange" id="orange-field">
+                  <label class="checkbox-feed__label" for="orange-field">Оранжевый</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <fieldset class="page-form info-feed">
             <p class="info-feed__legend legend-text">Фио</p>
@@ -105,56 +109,68 @@
               </li>
               <li class="info-feed__item">
                 <label class="info-feed__label info-feed__label--personal" for=surname>Фамилия:</label>
-                <input class="info-feed__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+                <input class="info-feed__input info-feed--famely" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
               </li>
               <li class="info-feed__item">
                 <label class="info-feed__label info-feed__label--personal" for=patronymic>Отчество:</label>
-                <input class="info-feed__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+                <input class="info-feed__input info-feed__input--patronomic" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="page-form tell-feed">
-            <p class="tell-feed__legend legend-text">Тел</p>
-            <div class="tell-feed__item">
-              <label class="tell-feed__label tell-feed__label--contacts" for=phone>Тел</label>
-              <input class="tell-feed__input tell-feed__input--phone" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*">
-            </div>
-          </fieldset>
-          <fieldset class="page-form email-feed">
-            <p class="tell-feed__legend legend-text">e-mail</p>
-            <div class="email-feed__item">
-              <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
-              <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
-            </div>
-          </fieldset>
+          <div class="tell-feed_wrapper">
+            <fieldset class="page-form tell-feed">
+              <p class="tell-feed__legend legend-text">Тел</p>
+              <div class="tell-feed__item">
+                <label class="tell-feed__label tell-feed__label--contacts" for=phone>Тел</label>
+                <input class="tell-feed__input tell-feed__input--phone" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*">
+              </div>
+            </fieldset>
+            <fieldset class="page-form email-feed">
+              <p class="email-feed__legend legend-text">e-mail</p>
+              <div class="email-feed__item">
+                <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
+                <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="page-form add-feed">
             <p class="add-feed__legend legend-text">Доп</p>
             <div class="add-feed__item">
               <label class="add-feed__label add-feed__label--contacts" for=add>Доп</label>
-              <textarea class="add-feed__input add-feed__input--wish" id="add" name="add" placeholder="Опишите ваши пожелания к заказу"></textarea>
+              <textarea class="add-feed__input add-feed__input--wish" id="add" name="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <fieldset class="page-footer__submit">
-            <p class="page-form__text">*Поля обязательны к заполнению</p>
+            <p class="page-form__text">*Поля обязательны для заполнения</p>
             <button class="page-form__button" type="submit">Отправить заказ</button>
           </fieldset>
         </form>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer-form">
       <div class="socials">
+        <a class=socials__logo>
+          <span class="visually-hidden">Лого</span>
+        </a>
         <ul class="socials__list no no-bulites">
           <li class="socials__item">
-            <a class="socials__link" href="">Инстаграм</a>
+            <a class="socials__link socials__link--inst" href="">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Фейсбук</a>
+            <a class="socials__link socials__link--fb" href="">
+              <span class="visually-hidden" >Фейсбук</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Твитер</a>
+            <a class="socials__link socials__link--twitter" href="">
+              <span class="visually-hidden">Твитер</span>
+            </a>
           </li>
         </ul>
+        <a class="copiright-developed" href="">Разработано</a>
       </div>
-      <a class="copiright-developed copiright-developed--symbol" href="">Разработано</a>
     </footer>
   </body>
+</html>
