@@ -10,69 +10,29 @@
 
   @media (min-width: @desktop-width) {
     width: 1150px;
+    padding-top: 80px;
   }
 }
 
 .catalog__item {
   display: grid;
   grid-template-rows: 195px auto auto 1fr;
+  height: 372px;
+  border: 1px solid @bord-lightgrey;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    width: 670px;
-    margin-left: 30px;
-    display: grid;
-    grid-template-rows: 40px 40px 1fr;
     grid-template-columns: 334px 1fr;
+    width: 669px;
+    margin-left: 49px;
     margin-top: 54px;
-
-    .catalog__link {
-      grid-row-start: 1;
-      grid-row-end: 4;
-      grid-column-start: 1;
-      grid-column-end: 1;
-      width: 334px;
-      height: 280px;
-    }
-
-    .catalog__name,
-    .catalog__characteristics,
-    .catalog__prise {
-      grid-column-start: 2;
-      grid-column-end: 2;
-      height: 20px;
-    }
-
-    .catalog__prise {
-      align-self: flex-end;
-    }
+    grid-template-rows: 51px auto auto auto;
+    height: 332px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    .catalog__item {
-      width: 316px;
-      grid-template-columns: auto;
-    }
-
-    .catalog__name,
-    .catalog__characteristics,
-    .catalog__prise {
-      grid-column-start: 1;
-      grid-column-end: 1;
-    }
-
-    .catalog__link {
-      width: 316px;
-      height: 462px;
-    }
-
-    .catalog__prise {
-      align-self: flex-end;
-      padding-top: 40px;
-    }
-
-    .catalog__characteristics--specification {
-      margin-top: 20px;
-    }
+    height: 658px;
   }
 }
 
@@ -89,6 +49,20 @@
 .catalog__name {
   font-weight: 700;
   padding-left: 28px;
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-left: 32px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+    padding-top: 2px;
+    line-height: 24px;
+  }
 }
 
 .catalog__characteristics {
@@ -96,10 +70,133 @@
   line-height: 30px;
   color: @text-darkgrey;
   padding-left: 28px;
+  padding-top: 6px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -10px;
+    padding-left: 27px;
+  }
 }
 
 .catalog__prise {
   font-size: 15px;
   font-weight: 700;
   padding-left: 28px;
+  position: relative;
+  padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 184px;
+    padding-left: 32px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+    padding-left: 28px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url("../img/cart.svg");
+    background-repeat: no-repeat;
+    left: 213px;
+    top: 26px;
+    filter: brightness(0);
+    opacity: 0.2;
+
+    @media (min-width: @tablet-width) {
+      top: 184px;
+      left: 280px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 43px;
+      left: 263px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 204px;
+    background-image: url("../img/divider.svg");
+    background-repeat: no-repeat;
+    left: 28px;
+    top: 2px;
+    filter: brightness(0);
+    opacity: 0.2;
+
+    @media (min-width: @tablet-width) {
+      top: 159px;
+      left: 32px;
+      width: 268px;
+      background-repeat: repeat-x;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 18px;
+      left: 28px;
+      width: 254px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__link {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    height: 280px;
+    width: 334px;
+  }
+
+  .catalog__name,
+  .catalog__characteristics,
+  .catalog__prise {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    height: 20px;
+  }
+
+  .catalog__characteristics--specification {
+    padding-top: 30px;
+  }
+
+  .catalog__prise--basket {
+    margin-top: -7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item {
+    width: 316px;
+  }
+
+  .catalog__name,
+  .catalog__characteristics,
+  .catalog__prise {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .catalog__link {
+    height: 462px;
+  }
+
+  .catalog__name--basket {
+    padding-top: 3px;
+  }
 }

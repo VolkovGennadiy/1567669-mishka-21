@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="page-header__navigation">
         <div class="page-header__nav">
-          <a class="page-header__logo" href="">
+          <a class="page-header__logo" href="index.html">
             <picture>
               <img class="page-header__img" src="img/mishka-logo-mobile.svg.png" alt="Интернет-магазин «Мишка»">
             </picture>
@@ -28,22 +28,25 @@
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item site-list__item--search">
-              <a class="site-list__search">Поиск</a>
+              <a class="site-list__search" href="">
+                <span class="site-list__search--span">Поиск</span>
+              </a>
             </li>
             <li class="site-list__item site-list__item--basket">
               <a class="site-list__basket" href="">Корзина: пока пуста</a>
             </li>
             <li class="site-list__item site-list__item--new">
-              <a class="site-list__basket" href="">Новые поступления</a>
+              <a class="site-list__link" href="">Новые поступления</a>
             </li>
             <li class="site-list__item site-list__item--sale">
-              <a class="site-list__basket" href="">Распродажа</a>
+              <a class="site-list__link" href="">Распродажа</a>
             </li>
           </ul>
+          <span class="header-nav--deleviry">Бесплатная доставка по России</span>
         </nav>
       </div>
         <div class="page-header__title--catalog">
-          <h1 class="page-header__catalog">Каталог товаров</h1>
+          <h2 class="page-header__catalog">Каталог товаров</h2>
         </div>
       </nav>
     </header>
@@ -53,35 +56,51 @@
         <ul class="catalog__list no-bulites">
           <li class="catalog__item">
             <a class="catalog__link" href="">
-              <img class="catalog__image" src="img/bunny.jpg" alt="Зайчик-попрыгайчик">
+              <picture>
+                <source srcset="img/banny-desktop.jpg" media="(min-width: 1150px">
+                <source srcset="img/banny-tablet.jpg" media="(min-width: 768px">
+                <img class="catalog__image" src="img/bunny.jpg" alt="Зайчик-попрыгайчик">
+              </picture>
             </a>
             <a class="catalog__name" href="">Зайчик-попрыгайчик</a>
-            <span class="catalog__characteristics">Рост 30см, вес 200 г</span>
-            <p class="catalog__prise catalog__prise--basket">1200 руб.</p>
+            <span class="catalog__characteristics">Рост 30 см, вес 200 г</span>
+            <p class="catalog__prise">1 200 руб.</p>
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="">
-              <img class="catalog__image" src="img/basketlinen.jpg" alt=">Корзинка для белья">
+              <picture>
+                <source srcset="img/basketlinen-desktop.jpg" media="(min-width: 1150px">
+                <source srcset="img/basketlinen-tablet.jpg" media="(min-width: 768px">
+                <img class="catalog__image" src="img/basketlinen.jpg" alt=">Корзинка для белья">
+              </picture>
             </a>
             <a class="catalog__name" href="">Корзинка для белья</a>
-            <span class="catalog__characteristics">Диаметр 15см, высота 10 см</span>
-            <p class="catalog__prise catalog__prise--basket">690р руб.</p>
+            <span class="catalog__characteristics">Диаметр 15 см, высота 10 см</span>
+            <p class="catalog__prise">690 руб.</p>
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="">
-              <img class="catalog__image" src="img/basketplay.jpg" alt="Большая корзинка">
+              <picture>
+                <source srcset="img/basketplay-desktop.jpg" media="(min-width: 1150px">
+                <source srcset="img/basketplay-tablet.jpg" media="(min-width: 768px">
+                <img class="catalog__image" src="img/basketplay.jpg" alt="Большая корзинка">
+              </picture>
             </a>
-            <a class="catalog__name" href="">Большая корзинка<br>для игрушек</a>
-            <span class="catalog__characteristics catalog__characteristics--specification">Диаметр 30см, высота 30 см</span>
-            <p class="catalog__prise catalog__prise--basket">1500 руб.</p>
+            <a class="catalog__name catalog__name--basket" href="">Большая корзинка<br>для игрушек</a>
+            <span class="catalog__characteristics catalog__characteristics--specification">Диаметр 30 см, высота 30 см</span>
+            <p class="catalog__prise catalog__prise--basket">1 500 руб.</p>
           </li>
         </ul>
       </section>
       <section class="page-main__process production-main">
-        <h2 class="production-main__process production-main__process--camera">Процесс производства</h2>
-        <video class="production-main__video" poster="https://via.placeholder.com/260x150"></video>
-        <p class="production-main__description">По просьбе наших любимых<br class="br-none">
-          фоловеров мы сняли для вас<br br class="br-none"> подробное видео о том, как<br br class="br-none">
+        <h2 class="production-main__process production-main__process--camera">Процесс<br class="br-none"> производства</h2>
+        <picture class="production-main__picture">
+          <source srcset="img/video-desktop.jpg" media="(min-width: 1150px">
+          <source srcset="img/video-tablet.jpg" media="(min-width: 768px">
+          <img class="production-main__video" src="img/video-mobile.jpg">
+        </picture>
+        <p class="production-main__description">По просьбам наших любимых<br class="br-none">
+          фолловеров мы сняли для вас<br class="br-none"> подробное видео о том, как<br br class="br-none">
           появляются наши товары
         </p>
         <a class="production-main__button" href="form.html">Сделать заказ</a>
@@ -89,18 +108,27 @@
     </main>
     <footer class="page-footer">
       <div class="socials">
+        <a class=socials__logo>
+          <span class="visually-hidden">Лого</span>
+        </a>
         <ul class="socials__list no no-bulites">
           <li class="socials__item">
-            <a class="socials__link" href="">Инстаграм</a>
+            <a class="socials__link socials__link--inst" href="">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Фейсбук</a>
+            <a class="socials__link socials__link--fb" href="">
+              <span class="visually-hidden" >Фейсбук</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">Твитер</a>
+            <a class="socials__link socials__link--twitter" href="">
+              <span class="visually-hidden">Твитер</span>
+            </a>
           </li>
         </ul>
+        <a class="copiright-developed" href="">Разработано</a>
       </div>
-      <a class="copiright-developed copiright-developed--symbol" href="">Разработано</a>
     </footer>
   </body>
