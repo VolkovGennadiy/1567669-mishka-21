@@ -9,24 +9,30 @@
   margin-bottom: 16px;
   height: 502px;
 
-  &::before {
-    content: "";
+  .production-main__play {
     position: absolute;
-    width: 101px;
-    height: 77px;
-    background-image: url("../img/play.svg");
-    top: 132px;
-    left: 80px;
-    z-index: 1;
+    top: 26%;
+    left: 31%;
+    width: 96px;
+    height: 72px;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
 
     @media (min-width: @tablet-width) {
-      left: 284px;
-      top: 188px;
+      left: 42.5%;
+      top: 25.5%;
     }
 
     @media (min-width: @desktop-width) {
-      left: 292px;
-      top: 192px;
+      left: 28%;
+      top: 40%;
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
 
@@ -147,6 +153,19 @@
     width: 224px;
     margin-top: 38px;
     margin-left: 40px;
+  }
+
+  &:hover {
+    background-color: @text-darkgrey;
+    color: @basik-white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
