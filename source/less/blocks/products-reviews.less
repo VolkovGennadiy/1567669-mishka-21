@@ -6,7 +6,7 @@
 .products-reviews__title {
   font-size: 25px;
   font-weight: 700;
-  padding-top: 35px;
+  padding-top: 16px;
 }
 
 .products-reviews__text {
@@ -98,7 +98,12 @@
     padding: 0;
     background-image: url("../img/review.png");
     background-repeat: no-repeat;
-    background-position: left top 56px;
+    background-position: left top 40px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.png");
+      background-size: 350px 457px;
+    }
 
     @media (min-width: @desktop-width) {
       background-position: left 50px top 50px;
@@ -106,8 +111,8 @@
   }
 
   .products-reviews__title {
-    padding-top: 97px;
-    padding-left: 51px;
+    padding-top: 81px;
+    padding-left: 50px;
     font-size: 43px;
     line-height: 50px;
 
@@ -135,8 +140,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
-    margin-top: 135px;
-    margin-left: 34px;
+    margin-top: 119px;
+    margin-left: 33px;
 
     @media (min-width: @desktop-width) {
       margin-top: 128px;
@@ -165,7 +170,7 @@
   .pruduct-rewiews__signature {
     display: flex;
     flex-direction: column;
-    margin-top: -77px;
+    margin-top: -61px;
     margin-left: 51px;
     font-size: 18px;
     line-height: 24px;
@@ -178,7 +183,7 @@
 
   .products-reviews__slide {
     border: none;
-    margin-top: -54px;
+    margin-top: -38px;
 
     @media (min-width: @desktop-width) {
       margin-top: -120px;
