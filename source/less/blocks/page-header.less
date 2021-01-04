@@ -66,10 +66,20 @@
     background-repeat: no-repeat;
     height: 489px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 322px 373px;
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/hero-desktop.jpg");
       height: 752px;
       background-position: bottom 5px center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 768px 746px;
+      }
     }
   }
 }

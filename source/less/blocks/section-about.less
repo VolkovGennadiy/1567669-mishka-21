@@ -1,7 +1,6 @@
 .section-about {
   position: relative;
   margin-top: 55px;
-  padding-left: 30px;
 
   &::before {
     content: "";
@@ -29,13 +28,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 34px;
     padding-left: 50px;
+    margin-top: 28px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
-    padding-top: 35px;
+    padding-top: 76px;
     width: 1150px;
     height: 670px;
   }
@@ -43,6 +42,8 @@
 
 .section-about__title {
   padding: 0;
+  margin-left: 29px;
+  margin-top: 23px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
@@ -54,6 +55,7 @@
   color: @basik-black;
   font-weight: 700;
   list-style-type: none;
+  padding-inline-start: 29px;
 }
 
 .about-list__item {
@@ -172,6 +174,7 @@
     display: grid;
     grid-template-columns: 335px 335px;
     grid-template-rows: repeat(3, auto);
+    padding-inline-start: 0;
   }
 
   .about-list__item--support {
