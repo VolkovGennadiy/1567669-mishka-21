@@ -25,6 +25,11 @@
   padding-left: 116px;
   margin-top: 20px;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 48px;
+    margin-top: 18px;
+  }
+
   &:hover {
     opacity: 0.6;
   }
@@ -34,14 +39,42 @@
   }
 }
 
+.header__logo {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
 .header-nav__toggle {
-  margin-left: 67px;
-  background-image: url("../img/menu.svg");
+  margin-left: 61px;
+  margin-top: 29px;
+  border: none;
   width: 20px;
   height: 14px;
-  border: none;
+  background: none;
   cursor: pointer;
-  margin-top: 30px;
 }
 
 .page-header__title-wrapper {
@@ -241,13 +274,6 @@
     margin-top: 1px;
   }
 
-  .page-header__logo {
-    background-image: url("../img/mishka-logo-tablet.png");
-    background-repeat: no-repeat;
-    padding-bottom: 50px;
-    margin-left: 48px;
-  }
-
   .page-header__img {
     display: none;
   }
@@ -260,7 +286,7 @@
     margin-top: -95px;
 
     @media (min-width: @desktop-width) {
-      margin-top: -92px;
+      margin-top: -56px;
     }
   }
 
@@ -287,26 +313,6 @@
     margin-left: 36px;
     background-repeat: no-repeat;
 
-    &::before {
-      display: inline-block;
-      content: "";
-      width: 18px;
-      height: 18px;
-      background-image: url("../img/search.svg");
-      filter: brightness(0);
-      opacity: 0.2;
-    }
-
-    &:hover::before {
-      filter: brightness(1);
-      opacity: 1;
-    }
-
-    &:active {
-      filter: brightness(1);
-      opacity: 0.3;
-    }
-
     @media (min-width: @desktop-width) {
       margin-left: -8px;
       margin-top: 22px;
@@ -318,26 +324,18 @@
   }
 
   .site-list__basket {
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 21px;
-      height: 18px;
-      background-image: url("../img/cart.svg");
-      margin-right: 26px;
-      filter: brightness(0);
-      opacity: 0.2;
-    }
+    display: block;
+  }
 
-    &:hover::before {
-      filter: brightness(1);
-      opacity: 1;
-    }
+  .site-list__itembasket {
+    fill: @background-lightgreen;
+    filter: brightness(0);
+    opacity: 0.2;
+  }
 
-    &:active::before {
-      filter: brightness(1);
-      opacity: 0.2;
-    }
+  .site-list__basket:hover .site-list__itembasket {
+    filter: brightness(1);
+    opacity: 1;
   }
 
   .site-list__item--basket {
@@ -394,8 +392,6 @@
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    background-image: url("../img/mishka-logo-desktop.svg");
-    background-repeat: no-repeat;
     width: 149px;
     height: 72px;
     text-align: center;
