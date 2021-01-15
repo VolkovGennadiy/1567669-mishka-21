@@ -4,7 +4,6 @@
 
 .page-header__navigation {
   width: 320px;
-  height: 77px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -17,17 +16,28 @@
   }
 }
 
+.page-header__navigation--close {
+  height: 79px;
+}
+
+.page-header__navigation--active {
+  height: 395px;
+}
+
+
 .page-header__nav {
   display: flex;
 }
 
 .page-header__logo {
   padding-left: 116px;
-  margin-top: 20px;
 
   @media (min-width: @tablet-width) {
     padding-left: 48px;
-    margin-top: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    height: 87px;
+    width: 322px;
   }
 
   &:hover {
@@ -41,6 +51,7 @@
 
 .header__logo {
   display: block;
+  margin-top: 22px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -52,6 +63,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    margin-top: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,17 +76,31 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin-left: 218px;
+    margin-top: 9px;
   }
 }
 
 .header-nav__toggle {
   margin-left: 61px;
-  margin-top: 29px;
+  margin-top: 31px;
   border: none;
   width: 20px;
   height: 14px;
   background: none;
   cursor: pointer;
+  outline: none;
+}
+
+.header-nav__button--close {
+  display: block;
+}
+
+.header-nav__button--active {
+  background-image: url("../img/menu-close.svg");
+  width: 21px;
+  height: 20px;
+  fill: none;
 }
 
 .page-header__title-wrapper {
@@ -86,11 +112,11 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    margin-top: 86px;
+    margin-top: 8px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 86px;
+    margin-top: 8px;
   }
 
   &--container {
@@ -146,7 +172,24 @@
   }
 }
 
+.header-nav {
+  padding-top: 22px;
+}
+
 .header-nav__list {
+  margin-top: 40px;
+}
+
+.header-nav__list--none {
+  display: none;
+}
+
+.header-nav__list--block {
+  display: block;
+}
+
+.site-list__item--sale,
+.site-list__item--new {
   display: none;
 }
 
@@ -154,7 +197,15 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  padding-top: 55px;
+  height: 51px;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  padding-top: 28px;
+  padding-left: 76px;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 
   &:hover {
     opacity: 0.6;
@@ -163,6 +214,18 @@
   &:active {
     opacity: 0.2;
   }
+}
+
+.site-list__itemsearch {
+  margin-left: -42px;
+  margin-right: 22px;
+  margin-top: 3px;
+}
+
+.site-list__itembasket {
+  margin-left: -46px;
+  margin-right: 20px;
+  margin-top: 1px;
 }
 
 .page-header__title--form {
@@ -178,9 +241,9 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    margin-top: 86px;
+    margin-top: 8px;
     height: 150px;
-    padding-top: 75px;
+    padding-top: 76px;
     font-size: 29px;
     line-height: 30px;
 
@@ -200,7 +263,7 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 66px;
-    margin-top: 87px;
+    margin-top: 8px;
     font-size: 35px;
     line-height: 40px;
     height: 186px;
@@ -227,11 +290,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-top: 90px;
+    margin-top: 9px;
     padding-top: 63px;
     font-size: 29px;
     line-height: 50px;
-    height: 155px;
+    height: 158px;
 
     &::before {
       content: "";
@@ -241,12 +304,12 @@
       background-image: url("../img/zigzag-fill-desktop.svg");
       background-repeat: repeat-x;
       left: 0;
-      top: 301px;
+      top: 298px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 88px;
+    margin-top: 9px;
     font-size: 35.5px;
     line-height: 57px;
     padding-top: 58px;
@@ -267,11 +330,15 @@
 
 .header-nav--deleviry {
   display: none;
+
+   &:hover {
+     opacity: 0.3;
+   }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__nav {
-    margin-top: 1px;
+  .site-list__basketspan {
+    margin-left: 6px;
   }
 
   .page-header__img {
@@ -304,13 +371,21 @@
 
   .site-list__item--search {
     order: -1;
-    margin-left: 348px;
-    margin-top: 5px;
+    margin-left: 371px;
+    width: 62px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
+    margin-top: -16px;
+  }
+
+  .site-list__itemsearch {
+    margin-left: 19px;
+    margin-top: 9px;
   }
 
   .site-list__search {
     position: relative;
-    margin-left: 36px;
+    margin-left: -6px;
     background-repeat: no-repeat;
 
     @media (min-width: @desktop-width) {
@@ -325,12 +400,14 @@
 
   .site-list__basket {
     display: block;
+    margin-top: -3px;
   }
 
   .site-list__itembasket {
     fill: @background-lightgreen;
     filter: brightness(0);
     opacity: 0.2;
+    margin-left: 11px;
   }
 
   .site-list__basket:hover .site-list__itembasket {
@@ -340,30 +417,29 @@
 
   .site-list__item--basket {
     order: -1;
-    margin-left: 514px;
+    margin-left: 454px;
     font-size: 17px;
     line-height: 24px;
     position: relative;
-    margin-top: -82px;
-
-    @media (min-width: @tablet-width) {
-      margin-left: 465px;
-    }
+    margin-top: -80px;
+    width: 295px;
 
     @media (min-width: @desktop-width) {
-      margin-left: 47px;
-      margin-top: -60px;
+      margin-left: -2px;
+      margin-top: -46px;
     }
   }
 
   .site-list__item--catalog {
-    margin-top: -5px;
+    margin-top: -6px;
     margin-left: 30px;
+    border: none;
   }
 
   .site-list__item--knitting {
-    margin-top: -5px;
+    margin-top: -6px;
     margin-left: 16px;
+    border: none;
   }
 
   .paragraph-none {
@@ -381,7 +457,7 @@
     font-size: 15px;
     line-height: 24px;
     color: @text-darkgrey;
-    margin-top: -27px;
+    margin-top: -53px;
     margin-right: 50px;
 
     @media (min-width: @desktop-width) {
@@ -392,11 +468,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    width: 149px;
-    height: 72px;
-    text-align: center;
-    margin-left: 500px;
-    margin-top: 7px;
+    width: 469px;
+    height: 87px;
+    margin-left: 233px;
+    margin-top: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .header-nav__list {
@@ -405,23 +481,28 @@
 
   .site-list__item--catalog {
     order: -4;
-    margin-left: 30px;
-    margin-top: -58px;
+    margin-left: 1px;
+    margin-top: -49px;
     font-size: 17px;
     line-height: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 54px;
+    padding-left: 49px;
   }
 
   .site-list__item--knitting {
     order: -3;
-    margin-top: -58px;
-    margin-left: 50px;
+    margin-top: -49px;
+    margin-left: -50px;
     font-size: 17px;
     line-height: 24px;
   }
 
   .site-list__item--search {
     order: -2;
-    margin-top: -58px;
+    margin-top: -55px;
+    margin-left: 328px;
   }
 
   .site-list__item--sale,
@@ -430,12 +511,14 @@
   }
 
   .site-list__item--new {
-    margin-left: 30px;
-    margin-top: -3px;
+    margin-left: 31px;
+    margin-top: -8px;
+    border: none;
   }
 
   .site-list__item--sale {
-    margin-left: 42px;
-    margin-top: -3px;
+    margin-left: 41px;
+    margin-top: -8px;
+    border: none;
   }
 }

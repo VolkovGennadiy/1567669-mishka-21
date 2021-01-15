@@ -1,6 +1,6 @@
 .section-about {
   position: relative;
-  margin-top: 55px;
+  margin-top: 53px;
 
   &::before {
     content: "";
@@ -22,13 +22,12 @@
       background-image: url("../img/zigzag-desktop.svg");
       width: 1050px;
       height: 24px;
-      top: 70px;
-      left: 75px;
+      top: 112px;
+      left: 49px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 50px;
     margin-top: 28px;
   }
 
@@ -42,10 +41,12 @@
 
 .section-about__title {
   padding: 0;
-  margin-left: 29px;
+  margin-left: 30px;
   margin-top: 23px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    margin-top: 34px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -174,7 +175,7 @@
     display: grid;
     grid-template-columns: 335px 335px;
     grid-template-rows: repeat(3, auto);
-    padding-inline-start: 0;
+    padding-inline-start: 51px;
   }
 
   .about-list__item--support {
@@ -188,13 +189,14 @@
 @media (min-width: @desktop-width) {
   .section-about__short {
     column-gap: 16px;
-    padding-left: 200px;
+    padding-left: 225px;
+    margin-top: -3px;
   }
 
   .section-about__title {
-    padding-top: 81px;
+    padding-top: 92px;
     font-size: 53px;
     line-height: 57px;
-    padding-left: 200px;
+    padding-left: 195px;
   }
 }

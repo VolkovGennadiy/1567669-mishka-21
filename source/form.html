@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="preload" href="/fonts/opensans.woff2">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -20,10 +20,10 @@
         <path d="M80.6473 33.3186C79.0473 32.7186 77.3473 32.7186 75.7473 32.5186C74.1473 32.3186 72.5473 32.1186 70.8473 31.9186C69.2473 32.0186 67.5473 31.9186 65.8473 32.0186L60.9473 32.3186C54.4473 32.6186 47.9473 32.6186 41.4473 32.4186C34.9473 32.3186 28.4473 31.9186 21.8473 31.9186C18.5473 31.9186 15.2473 32.0186 11.9473 32.2186C10.3473 32.5186 8.74733 32.7186 7.04733 33.1186C5.44733 33.5186 3.94733 34.0186 2.24733 34.1186C3.84733 34.5186 5.54733 34.4186 7.24733 34.4186C8.84733 34.4186 10.4473 34.5186 12.1473 34.6186C15.3473 34.4186 18.6473 34.4186 21.8473 34.3186C28.3473 34.3186 34.8473 34.6186 41.4473 34.8186C47.9473 34.9186 54.5473 35.0186 61.1473 34.7186L66.0473 34.4186C67.6473 34.3186 69.2473 34.3186 70.8473 34.3186C72.4473 34.2186 74.1473 34.0186 75.7473 33.8186C77.4473 33.6186 78.9473 33.2186 80.6473 33.3186H80.7473V33.2186C80.7473 33.0186 80.7473 32.9186 80.7473 32.7186C80.7473 33.1186 80.7473 33.2186 80.6473 33.3186Z" fill="black"/>
       </symbol>
       <symbol id="header-toogle" width="20" height="14"
-        fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
-        <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
-        <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 0H0V2H20V0Z" fill="#curentControl"/>
+        <path d="M20 6H0V8H20V6Z" fill="#curentControl"/>
+        <path d="M20 12H0V14H20V12Z" fill="#curentControl"/>
       </symbol>
       <symbol id="header-logo-tablet">
         <path d="M110.889 41.8087c4.423.8981.804-35.82209.1-38.21688-2.01-6.58569-26.8421-2.09545-32.3714-1.69632-12.7678.99783-25.3346-.997827-37.8007-.39913-6.2331.29935-35.08634-1.796094-37.70022 1.99566C-1.91001 10.6764.402269 29.2361 1.80974 38.5159c-4.02135.7983 2.31228 4.1909 3.11655 4.8894 6.33361 2.1952 16.48751-.1996 23.12281.3991 15.4822 1.4967 31.9697-2.1952 47.5524-.9978 4.5241 1.0976 9.6513.9978 14.2758 1.1974 3.5187 5.5878 19.8047-2.3948 21.0117-2.1953-.101 0 .503.0998 0 0z" fill="#000"/>
@@ -58,9 +58,9 @@
       </symbol>
     </svg>
     <header class="page-header">
-      <div class="page-header__navigation">
+      <div class="page-header__navigation page-header__navigation--close">
         <div class="page-header__nav">
-          <a class="page-header__logo" href="">
+          <a class="page-header__logo" href="index.html">
             <svg class="header__logo" width="86" height="35" viewBox="0 0 86 35">
               <use xlink:href="#header-logo"></use>
             </svg>
@@ -71,15 +71,15 @@
               <use xlink:href="#header-logo-desktop"></use>
             </svg>
           </a>
-          <button class="header-nav__toggle">
-            <svg viewBox="0 0 20 14" width="20" height="14">
+          <button class="header-nav__toggle header-nav--close">
+            <svg class="header-nav__button header-nav__button--close" viewBox="0 0 20 14" width="20" height="14">
               <use xlink:href="#header-toogle"></use>
             </svg>
             <span class="visually-hidden">Меню</span>
           </button>
         </div>
         <nav class="header-nav">
-          <ul class="header-nav__list site-list no-bulites">
+          <ul class="header-nav__list site-list header-nav__list--none no-bulites">
             <li class="site-list__item site-list__item--catalog">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -88,10 +88,10 @@
             </li>
             <li class="site-list__item site-list__item--search">
               <a class="site-list__search" href="">
-                <span class="site-list__search--span">Поиск</span>
-                <svg width="18" height="18" viewBox="0 0 18 18">
+                <svg class="site-list__itemsearch" width="18" height="18" viewBox="0 0 18 18">
                   <use xlink:href="#site-search"></use>
                 </svg>
+                <span class="site-list__search--span">Поиск по сайту</span>
               </a>
             </li>
             <li class="site-list__item site-list__item--basket">
@@ -119,8 +119,8 @@
     <main class="page-main">
       <div class="page-main__wrapper">
         <p class="page-main__description">
-          Мы будем рады воплотить в жизнь<br class="page-main__description--none"> ваши пожелания! Заполните простую<br class="text-none">
-          форму <br class="text-none--write">заказа и мы свяжемся с вами,<br class="page-main__description--none"> чтобы уточнить детали.
+          Мы будем рады воплотить в жизнь<br class="page-main__description--none">&nbsp;ваши пожелания! Заполните простую<br class="text-none">
+          &nbsp;форму <br class="text-none--write">&nbsp;заказа и мы свяжемся с вами,<br class="page-main__description--none">&nbsp;чтобы уточнить детали.
         </p>
         <form class="page-main__form page-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="page-form radio-feed">
@@ -239,5 +239,6 @@
         <a class="copiright-developed" href="">Разработано</a>
       </div>
     </footer>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
