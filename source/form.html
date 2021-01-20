@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -120,7 +120,7 @@
       <div class="page-main__wrapper">
         <p class="page-main__description">
           Мы будем рады воплотить в жизнь<br class="page-main__description--none">&nbsp;ваши пожелания! Заполните простую<br class="text-none">
-          &nbsp;форму <br class="text-none--write">&nbsp;заказа и мы свяжемся с вами,<br class="page-main__description--none">&nbsp;чтобы уточнить детали.
+          форму <br class="text-none--write">&nbsp;заказа и мы свяжемся с вами,<br class="page-main__description--none">&nbsp;чтобы уточнить детали.
         </p>
         <form class="page-main__form page-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="page-form radio-feed">
@@ -189,14 +189,14 @@
               <p class="tell-feed__legend legend-text">Тел</p>
               <div class="tell-feed__item">
                 <label class="tell-feed__label tell-feed__label--contacts" for=phone>Тел</label>
-                <input class="tell-feed__input tell-feed__input--phone" type="text" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*">
+                <input class="tell-feed__input tell-feed__input--phone" type="tell" id="phone" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
               </div>
             </fieldset>
             <fieldset class="page-form email-feed">
               <p class="email-feed__legend legend-text">e-mail</p>
               <div class="email-feed__item">
                 <label class="email-feed__label email-feed__label--contacts" for=email>e-mail</label>
-                <input class="email-feed__input email-feed__input--email" type="text" id="email" name="email" placeholder="Ваш Email*">
+                <input class="email-feed__input email-feed__input--email" type="email" id="email" name="email" placeholder="Ваш Email*" required>
               </div>
             </fieldset>
           </div>
@@ -209,7 +209,7 @@
           </fieldset>
           <fieldset class="page-footer__submit">
             <p class="page-form__text">*Поля обязательны для заполнения</p>
-            <button class="page-form__button" type="submit">Отправить заказ</button>
+            <button class="page-form__button button-style" type="submit">Отправить заказ</button>
           </fieldset>
         </form>
       </div>

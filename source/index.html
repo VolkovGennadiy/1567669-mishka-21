@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -58,7 +58,7 @@
       </symbol>
     </svg>
     <header class="page-header">
-      <div class="page-header__navigation page-header__navigation--close">
+      <div class="page-header__navigation page-header__navigation--actve page-header__navigation--nojs">
         <div class="page-header__nav">
           <a class="page-header__logo" href="">
             <svg class="header__logo" width="86" height="35" viewBox="0 0 86 35">
@@ -113,7 +113,7 @@
         </nav>
       </div>
       <div class="page-header__title-wrapper page-header__title-wrapper--container">
-        <h2 class="page-header__title">Милые штуки<br class="paragraphf-none">&nbsp;ручной<br>работы для дома<br></h2>
+        <h2 class="page-header__title">Милые штуки<br class="paragraphf-none">&nbsp;ручной<br>работы для дома</h2>
         <ul class="page-header__list no-bulites">
           <li class="page-header-item page-header__item--subjects">
             <a class="page-header__link page-header__link--subjects" href="">Предметы<br>интерьера</a>
@@ -139,27 +139,29 @@
             </p>
             <table class="products-week__table specification-table">
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Цвет</td>
-                <td class="specification-table__cell">«Тиффани/серый»</td>
+                <td class="specification-table__cell specification-table__cell--line">Цвет:</td>
+                <td class="specification-table__cell">«Тиффани»/серый</td>
               </tr>
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Диаметр</td>
-                <td class="specification-table__cell">25см</td>
+                <td class="specification-table__cell specification-table__cell--line">Диаметр:</td>
+                <td class="specification-table__cell">25 см</td>
               </tr>
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Высота</td>
-                <td class="specification-table__cell">15см</td>
+                <td class="specification-table__cell specification-table__cell--line">Высота:</td>
+                <td class="specification-table__cell">15 см</td>
               </tr>
             </table>
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
-              <source srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="products-week__image" src="img/triple-set-mobile.jpg"
-                srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
-            </picture>
+            <div class="products-week__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
+                <source srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="products-week__image" src="img/triple-set-mobile.jpg"
+                  srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+              </picture>
+            </div>
             <p class="products-week__price">Цена: 990 руб.</p>
             <button class="products-week__order button-style" type="button">
               <span class="button-style">Заказать</span>
@@ -221,12 +223,12 @@
         <p class="contacts-map">
           <iframe class="contacts-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         </p>
-        <button class="contacts__write button-style" type="button">Напишите нам</button>
+        <a class="contacts__write button-style" href="">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="socials">
-        <a class=socials__logo>
+        <a class=socials__logo href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Лого</span>
         </a>
         <ul class="socials__list no no-bulites">
@@ -246,7 +248,7 @@
             </a>
           </li>
         </ul>
-        <a class="copiright-developed" href="">Разработано</a>
+        <a class="copiright-developed" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
       </div>
     </footer>
     <div class="modal-order">
@@ -255,15 +257,15 @@
       <form action="https://echo.htmlacademy.ru" method="post" class="modal-form">
         <div class="modal-form__block checkbox-form">
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input" type="checkbox" name="small" id="small-field" value="small-size">
+            <input class="checkbox-form__input" type="radio" name="size" id="small-field" value="small-size" checked>
             <label class="checkbox-form__label" for="small-field">s</label>
           </div>
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input checkbox-form__input--medium" type="checkbox" name="medium" id="medium-field" value="medium-size">
+            <input class="checkbox-form__input checkbox-form__input--medium" type="radio" name="size" id="medium-field" value="medium-size">
             <label class="checkbox-form__label checkbox-form__label--medium" for="medium-field">m</label>
           </div>
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input checkbox-form__input--large" type="checkbox" name="large" id="large-field" value="large-size">
+            <input class="checkbox-form__input checkbox-form__input--large" type="radio" name="size" id="large-field" value="large-size">
             <label class="checkbox-form__label checkbox-form__label--large" for="large-field">l</label>
           </div>
         </div>

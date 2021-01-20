@@ -24,6 +24,17 @@
   height: 395px;
 }
 
+.page-header__navigation--nojs .page-header__navigation--active {
+  height: 395px;
+}
+
+.page-header__navigation--nojs .header-nav__list--none {
+  display: block;
+}
+
+.page-header__navigation--nojs .header-nav__toggle {
+  display: none;
+}
 
 .page-header__nav {
   display: flex;
@@ -376,6 +387,17 @@
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     height: 60px;
     margin-top: -16px;
+    filter: brightness(0);
+    opacity: 0.3;
+
+    &:hover {
+      filter: brightness(1);
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .site-list__itemsearch {
@@ -387,6 +409,7 @@
     position: relative;
     margin-left: -6px;
     background-repeat: no-repeat;
+
 
     @media (min-width: @desktop-width) {
       margin-left: -8px;
