@@ -5,9 +5,10 @@
 .page-main__description {
   font-size: 13px;
   line-height: 24px;
-  color: @text-darkgrey;
-  margin-left: 30px;
-  margin-top: 16px;
+  color: #444444;
+  padding-top: 16px;
+  width: 265px;
+  margin: 0 auto;
 
   .text-none--write {
     display: none;
@@ -15,14 +16,14 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    margin-top: 68px;
     line-height: 30px;
-    margin-left: 50px;
+    margin: 0 auto;
+    width: 668px;
+    padding-top: 68px;
 
     .text-none {
       display: block;
     }
-
 
     .page-main__description--none {
       display: none;
@@ -45,11 +46,15 @@
 }
 
 .radio-feed {
-  margin-left: 8px;
+  padding-top: 19px;
+  width: 261px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    margin-top: 58px;
-    margin-left: 27px;
+    width: 684px;
+    padding-top: 64px;
+    padding-left: 27px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,7 +101,6 @@
   line-height: 18px;
   color: @basik-black;
   width: 220px;
-  margin-left: 10px;
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
@@ -163,7 +167,7 @@
   position: relative;
   margin-bottom: 18px;
   padding-left: 4px;
-  padding-right: 108px;
+  margin-right: 108px;
 
   &::before {
     content: "";
@@ -180,20 +184,29 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 25px;
-    padding-top: 13px;
+    padding-left: 16px;
+    padding-top: 10px;
+    margin-right: 119px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 86px;
-    padding-top: 15px;
+    margin-left: 82px;
+    padding-top: 16px;
+    margin-right: 107px;
   }
 }
 
 .checkbox-feed__wrapper {
+  width: 268px;
+  margin: 0 auto;
+  padding-top: 3px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: min-content 1fr;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -204,18 +217,24 @@
 }
 
 .checkbox-feed {
+  padding-top: 2px;
+  padding-bottom: 0;
+
   @media (min-width: @tablet-width) {
     background-color: @background-grey;
     margin: 0;
-    height: 244px;
+    height: 254px;
     padding-top: 50px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @background-grey;
     margin: 0;
     padding-top: 48px;
-    height: 170px;
+    height: 180px;
   }
 }
 
@@ -229,8 +248,8 @@
   line-height: 18px;
   color: @basik-black;
   width: 220px;
-  margin-left: 16px;
-  margin-bottom: 23px;
+  margin-left: 4px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
@@ -279,7 +298,7 @@
     display: grid;
     grid-template-columns: min-content min-content;
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 26px;
+    column-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -290,17 +309,20 @@
 }
 
 .info-feed {
-  padding: 0;
-  margin-left: 20px;
-  margin-top: -5px;
+  width: 245px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr;
     gap: 115px;
-    padding-top: 64px;
-    height: 184px;
+    padding-top: 60px;
+    height: 244px;
+    width: 700px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -314,6 +336,7 @@
 .info-feed__legend {
   position: relative;
   padding-bottom: 2px;
+  padding-top: 2px;
 
   &::before {
     content: "";
@@ -327,7 +350,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 4px;
-    padding-left: 20px;
+    padding-left: 16px;
 
     &::before {
       display: none;
@@ -335,19 +358,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -40px;
+    margin-left: 16px;
   }
 }
 
 .info-feed__item {
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-left: 0;
+  padding-top: 3px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
+    padding-left: 9px;
   }
 
   @media (min-width: @desktop-width) {
@@ -362,6 +386,7 @@
 }
 
 .info-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -420,7 +445,7 @@
 }
 
 .tell-feed_wrapper {
-  height: 228px;
+  height: 221px;
 
   @media (min-width: @tablet-width) {
     background-color: @background-grey;
@@ -429,20 +454,23 @@
 }
 
 .tell-feed {
-  margin-top: 10px;
+  padding-top: 10px;
+  width: 245px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: auto;
-    gap: 119px;
-    margin-top: 61px;
-    padding-left: 34px;
-    padding-top: 62px;
+    gap: 136px;
+    padding-left: 41px;
+    padding-top: 58px;
+    width: 700px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 62px;
+    padding-top: 57px;
     width: 991px;
     margin: 0 auto;
   }
@@ -450,17 +478,18 @@
 
 .tell-feed__legend {
   position: relative;
-  padding-left: 4px;
-  padding-bottom: 10px;
+  padding-left: 1px;
+  padding-bottom: 7px;
   margin: 0;
+  padding-top: 3px;
 
   &::before {
     content: "";
     position: absolute;
     width: 200px;
     height: 1px;
-    top: 10px;
-    left: 66px;
+    top: 14px;
+    left: 61px;
     background-image: url("../img/borderlayer.svg");
   }
 
@@ -471,8 +500,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 1px;
-    padding-left: 11px;
+    padding-top: 6px;
+    padding-left: 19px;
   }
 }
 
@@ -485,13 +514,13 @@
     width: 25px;
     height: 24px;
     background-image: url("../img/phone.svg");
-    left: 244px;
+    left: 229px;
     z-index: 1;
-    top: 1px;
+    top: 4px;
 
     @media (min-width: @tablet-width) {
-      top: 0;
-      left: 467px;
+      top: 3px;
+      left: 450px;
     }
 
     @media (min-width: @desktop-width) {
@@ -502,15 +531,14 @@
 }
 
 .tell-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
   position: relative;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid @basik-black;
   width: 258px;
-  margin-left: 16px;
   padding-bottom: 16px;
-  padding-left: 1px;
   font-size: 19px;
   line-height: 18px;
   color: @text-darkgrey;
@@ -523,8 +551,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -38px;
+    margin-left: -55px;
     width: 677px;
+    padding-bottom: 16px;
   }
 
   &::placeholder {
@@ -546,29 +575,36 @@
 }
 
 .email-feed {
-  margin-top: 14px;
+  padding-top: 21px;
+  width: 245px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     gap: 94px;
-    margin-top: 21px;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 13px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 27px;
+    padding-top: 13px;
     margin: 0 auto;
     width: 997px;
+    padding-left: 54px;
   }
 }
 
 .email-feed__legend {
   position: relative;
-  padding-left: 4px;
+  padding-left: 1px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
-    padding-left: 25px;
+    padding-left: 16px;
+    padding-top: 15px;
   }
 
   &::before {
@@ -577,7 +613,7 @@
     width: 180px;
     height: 1px;
     top: 11px;
-    left: 86px;
+    left: 78px;
     background-image: url("../img/borderlayer.svg");
   }
 
@@ -597,12 +633,12 @@
     width: 32px;
     height: 21px;
     background-image: url("../img/mail.svg");
-    left: 240px;
+    left: 224px;
     z-index: 1;
-    top: 0;
+    top: 16px;
 
     @media (min-width: @tablet-width) {
-      top: 3px;
+      top: 17px;
       left: 462px;
     }
 
@@ -614,21 +650,24 @@
 }
 
 .email-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid @basik-black;
   width: 256px;
-  padding-bottom: 10px;
-  margin-left: 16px;
+  padding-bottom: 12px;
+  margin-left: -1px;
   font-size: 19px;
   line-height: 18px;
   color: @text-darkgrey;
+  margin-top: 11px;
 
   @media (min-width: @tablet-width) {
-    width: 480px;
-    padding-bottom: 13px;
     background-color: @background-grey;
+    width: 479px;
+    padding-bottom: 13px;
+    margin-left: 15px;
     padding-left: 20px;
   }
 
@@ -655,16 +694,18 @@
 }
 
 .add-feed {
-  padding-left: 19px;
-  margin-top: -15px;
+  width: 245px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     gap: 119px;
-    padding-top: 81px;
-    padding-left: 38px;
+    padding-top: 66px;
+    padding-left: 43px;
+    width: 700px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -675,18 +716,19 @@
 }
 
 .add-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
   border: 2px solid @text-darkgrey;
-  width: 238px;
+  width: 241px;
   height: 121px;
-  margin-bottom: 20px;
   margin-top: 1px;
-  margin-left: 9px;
   padding-top: 15px;
-  padding-left: 16px;
+  padding-left: 13px;
 
   @media (min-width: @tablet-width) {
     margin-top: -16px;
-    width: 493px;
+    width: 480px;
+    padding-left: 15px;
+    margin-left: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -739,27 +781,32 @@
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 10px;
+  }
 }
 
 .page-footer__submit {
-  margin-top: -35px;
-  margin-bottom: 14px;
+  width: 245px;
+  margin: 0 auto;
   border: none;
-  padding: 0;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row-reverse;
     margin-top: -1px;
     justify-content: space-between;
-    height: 118px;
+    height: 132px;
+    width: 735px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 94px;
     margin: 0 auto;
     height: 126px;
-    width: 1054px;
+    width: 1043px;
   }
 }
 
@@ -769,38 +816,38 @@
   border: 2px solid @text-darkgrey;
   text-transform: uppercase;
   font-weight: 700;
-  margin-left: 28px;
+  margin-left: 3px;
   margin-top: 13px;
   font-size: 17px;
   line-height: 16px;
 
   @media (min-width: @tablet-width) {
     width: 230px;
-    margin-left: 48px;
-    margin-top: 17px;
+    margin-left: 33px;
+    margin-top: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 130px;
-    margin-top: 12px;
+    margin-left: 132px;
+    margin-top: 27px;
   }
 }
 
 .page-form__text {
   font-size: 14px;
-  padding-left: 28px;
-  margin-top: 10px;
+  padding-left: 2px;
+  margin-top: -10px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 29px;
-    margin-right: 43px;
+    margin-top: 43px;
+    margin-right: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 224px;
-    margin-top: 25px;
+    margin-right: 212px;
+    margin-top: 39px;
   }
 }
 
@@ -810,12 +857,12 @@
     grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr;
     gap: 120px;
-    height: 166px;
+    height: 165px;
 
     @media (min-width: @desktop-width) {
       height: 164px;
       padding-top: 64px;
-      width: 949px;
+      width: 961px;
       margin: 0 auto;
     }
   }
@@ -831,6 +878,10 @@
     grid-row-start: 1;
     grid-row-end: 1;
     padding-top: 12px;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -842,7 +893,6 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @background-lightgreen;
-  margin-left: 10px;
   margin-top: 0;
 }
 

@@ -46,6 +46,22 @@
   z-index: -1;
 }
 
+.checkbox-form__input + .checkbox-form__label:hover::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+.checkbox-form__input + .checkbox-form__label:active::before {
+  border: 2px solid @basik-border;
+}
+
+.checkbox-form__input + .checkbox-form__label:focus::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+.checkbox-form__input:checked + .checkbox-form__label::before {
+  border: 2px solid @basik-border;
+}
+
 .checkbox-form__input + .checkbox-form__label {
   display: inline-flex;
   align-items: center;
@@ -56,7 +72,7 @@
   &::before {
     content: "s";
     text-transform: uppercase;
-    color: red;
+    color: @text-darkgrey;
     padding-left: 34px;
     padding-top: 13px;
     font-size: 17px;

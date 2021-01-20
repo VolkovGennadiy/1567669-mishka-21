@@ -2,9 +2,10 @@ let page = document.querySelector('.page-header__navigation');
 let toogle = document.querySelector('.header-nav__toggle');
 let navigation = document.querySelector('.header-nav__list');
 let navButton = document.querySelector('.header-nav__button');
-let modalBasket = document.querySelector('.catalog__priselink');
 let modalOrder = document.querySelector('.products-week__order');
 let modalPopup = document.querySelector('.modal-order');
+
+page.classList.remove('page-header__navigation--nojs');
 
 toogle.onclick = function() {
   page.classList.toggle('page-header__navigation--close');

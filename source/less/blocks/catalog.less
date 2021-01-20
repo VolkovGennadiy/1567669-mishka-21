@@ -17,7 +17,7 @@
 .catalog__item {
   display: grid;
   grid-template-rows: 195px auto auto 1fr;
-  height: 372px;
+  min-height: 372px;
   border: 1px solid @bord-lightgrey;
   margin-bottom: 30px;
 
@@ -30,25 +30,25 @@
     width: 669px;
     margin-left: 49px;
     margin-top: 54px;
-    grid-template-rows: 51px auto auto auto;
-    height: 332px;
+    grid-template-rows: max-content max-content 1fr;
+    min-height: 332px;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    height: 658px;
+    min-height: 658px;
   }
 }
 
 .catalog__item--basketplay {
-  height: 397px;
+  min-height: 397px;
 
   @media (min-width: @tablet-width) {
-    height: 332px;
+    min-height: 332px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 658px;
+    min-height: 658px;
   }
 }
 
@@ -107,20 +107,23 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -10px;
+    margin-top: -2px;
     padding-left: 27px;
   }
 }
 
 .catalog__prisewrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .catalog__priselink {
-  margin-top: 40px;
-  margin-left: 110px;
   filter: brightness(0);
   opacity: 0.2;
+  margin-right: 28px;
+  margin-bottom: 25px;
+  cursor: pointer;
 
   &:hover {
     filter: brightness(1);
@@ -132,19 +135,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 201px;
-    margin-left: 165px;
+    margin-right: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 61px;
-    margin-left: 152px;
+    margin-right: 49px;
+    margin-bottom: 24px;
   }
 }
 
 .catalog__priselink--basketlinen {
-  margin-left: 124px;
-
   @media (min-width: @tablet-width) {
     margin-left: 165px;
   }
@@ -166,9 +166,10 @@
   padding-left: 28px;
   position: relative;
   padding-top: 25px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 184px;
+    padding-top: 0;
     padding-left: 32px;
     font-size: 17px;
     line-height: 24px;
@@ -197,7 +198,7 @@
     opacity: 0.2;
 
     @media (min-width: @tablet-width) {
-      top: 159px;
+      top: -27px;
       left: 32px;
       width: 268px;
       background-repeat: repeat-x;
@@ -226,11 +227,11 @@
   .catalog__prise {
     grid-column-start: 2;
     grid-column-end: 2;
-    height: 20px;
+    min-height: 20px;
   }
 
   .catalog__characteristics--specification {
-    padding-top: 30px;
+    padding-top: 6px;
   }
 
   .catalog__prise--basket {

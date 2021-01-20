@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог</title>
-    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -144,7 +144,7 @@
             <span class="catalog__characteristics">Рост 30 см, вес 200 г</span>
             <div class="catalog__prisewrapper">
               <p class="catalog__prise">1 200 руб.</p>
-              <a class="catalog__priselink">
+              <a class="catalog__priselink catalog__priselink--open">
                 <svg width="21" height="18" viewBox="0 0 21 18">
                   <use xlink:href="#catalog-basket"></use>
                 </svg>
@@ -167,7 +167,7 @@
             <span class="catalog__characteristics">Диаметр 15 см, высота 10 см</span>
             <div class="catalog__prisewrapper">
               <p class="catalog__prise">690 руб.</p>
-              <a class="catalog__priselink catalog__priselink--basketlinen" href="">
+              <a class="catalog__priselink catalog__priselink--basketlinen">
                 <svg width="21" height="18" viewBox="0 0 21 18">
                   <use xlink:href="#catalog-basket"></use>
                 </svg>
@@ -190,7 +190,7 @@
             <span class="catalog__characteristics catalog__characteristics--specification">Диаметр 30 см, высота 30 см</span>
             <div class="catalog__prisewrapper">
               <p class="catalog__prise catalog__prise--basket">1 500 руб.</p>
-              <a class="catalog__priselink catalog__priselink--basketplay" href="">
+              <a class="catalog__priselink catalog__priselink--basketplay">
                 <svg width="21" height="18" viewBox="0 0 21 18">
                   <use xlink:href="#catalog-basket"></use>
                 </svg>
@@ -247,5 +247,29 @@
         <a class="copiright-developed" href="">Разработано</a>
       </div>
     </footer>
+    <div class="modal-order">
+      <p class="modal-order__paragraph">Добавить в корзину</p>
+      <p class="modal-order__span">Выберите размер:</p>
+      <form action="https://echo.htmlacademy.ru" method="post" class="modal-form">
+        <div class="modal-form__block checkbox-form">
+          <div class="checkbox-form__block">
+            <input class="checkbox-form__input" type="radio" name="size" id="small-field" value="small-size" checked>
+            <label class="checkbox-form__label" for="small-field">s</label>
+          </div>
+          <div class="checkbox-form__block">
+            <input class="checkbox-form__input checkbox-form__input--medium" type="radio" name="size" id="medium-field" value="medium-size">
+            <label class="checkbox-form__label checkbox-form__label--medium" for="medium-field">m</label>
+          </div>
+          <div class="checkbox-form__block">
+            <input class="checkbox-form__input checkbox-form__input--large" type="radio" name="size" id="large-field" value="large-size">
+            <label class="checkbox-form__label checkbox-form__label--large" for="large-field">l</label>
+          </div>
+        </div>
+        <div class="modal-form__buttonwrapper">
+          <button class="modal-form__button" type="submit">Добавить</button>
+        </div>
+      </form>
+    </div>
     <script src="js/script.min.js"></script>
+    <script src="js/modalcatalog.min.js"></script>
   </body>

@@ -10,7 +10,7 @@ const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore")
+const svgstore  = require("gulp-svgstore")
 const { plugin } = require("postcss");
 const del = require("del");
 const { reload } = require("browser-sync");
@@ -93,6 +93,18 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
+// script add
+
+const scriptsadd = () => {
+  return gulp.src("source/js/modalcatalog.js")
+    .pipe(uglify())
+    .pipe(rename("modalcatalog.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptsadd = scriptsadd;
+
 // copy
 
 const copy = (done) => {
@@ -136,6 +148,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/modalcatalog.js", gulp.series(scriptsadd));
   gulp.watch("source/*.html", gulp.series(html,));
 }
 
@@ -147,6 +160,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
+    scriptsadd,
     sprite,
     copy,
     images,
@@ -164,6 +178,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
+    scriptsadd,
     sprite,
     copy,
     createWebp
