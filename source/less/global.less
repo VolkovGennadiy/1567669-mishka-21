@@ -41,3 +41,28 @@ a {
     min-height: 100%;
   }
 }
+
+.legend-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @background-lightgreen;
+  margin-top: 0;
+}
+
+.button-style {
+  display: block;
+
+  &:hover {
+    background-color: @text-darkgrey;
+    color: @basik-white;
+  }
+
+  &:active {
+    background-color: @text-darkgrey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

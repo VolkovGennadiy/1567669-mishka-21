@@ -1,0 +1,75 @@
+.contacts-table__cell {
+  padding-right: 34px;
+  vertical-align: top;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 24px;
+  }
+}
+
+.contacts-table__row {
+  font-size: 14px;
+  line-height: 30px;
+  color: @text-darkgrey;
+}
+
+.contacts-table__cell--email {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 182px;
+    height: 1px;
+    top: 28px;
+    left: 0;
+    background-image: url("../img/layer-email.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 29px;
+      width: 205px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+
+  &:hover {
+    color: @basik-border;
+  }
+
+  &:active {
+    color: @basik-borderdown;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-table__row {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts-table__row--email {
+    margin-top: -84px;
+    margin-left: 22px;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 195px;
+    }
+  }
+
+  .contacts-table__row--adress {
+    margin-top: -26px;
+    margin-left: 15px;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 195px;
+    }
+  }
+}

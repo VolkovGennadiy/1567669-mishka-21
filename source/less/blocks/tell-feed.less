@@ -1,0 +1,133 @@
+.tell-feed_wrapper {
+  height: 221px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @background-grey;
+    height: 228px;
+  }
+}
+
+.tell-feed {
+  padding-top: 10px;
+  width: 245px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto;
+    gap: 136px;
+    padding-left: 41px;
+    padding-top: 58px;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+    width: 991px;
+    margin: 0 auto;
+  }
+}
+
+.tell-feed__legend {
+  position: relative;
+  padding-left: 1px;
+  padding-bottom: 7px;
+  margin: 0;
+  padding-top: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    top: 14px;
+    left: 61px;
+    background-image: url("../img/borderlayer.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 6px;
+    padding-left: 19px;
+  }
+}
+
+.tell-feed__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    background-image: url("../img/phone.svg");
+    left: 229px;
+    z-index: 1;
+    top: 4px;
+
+    @media (min-width: @tablet-width) {
+      top: 3px;
+      left: 450px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 611px;
+      top: 4;
+    }
+  }
+}
+
+.tell-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
+  position: relative;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid @basik-black;
+  width: 258px;
+  padding-bottom: 16px;
+  font-size: 19px;
+  line-height: 18px;
+  color: @text-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 480px;
+    background-color: @background-grey;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -55px;
+    width: 677px;
+    padding-bottom: 16px;
+  }
+
+  &::placeholder {
+    color: @basik-black;
+    opacity: 0.3;
+    font-size: 17px;
+    line-height: 18px;
+    z-index: -1;
+  }
+
+  &:hover {
+    border-bottom: 2px solid @basik-border;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @basik-border;
+    outline: none;
+  }
+}
+
+.tell-feed__label--contacts {
+  display: none;
+}

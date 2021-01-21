@@ -118,13 +118,18 @@
     font-size: 15px;
     line-height: 30px;
 
-    .br-none {
+    .production-main__br-none {
       display: none;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 250px;
+    margin-top: 11px;
+
+    .production-main__br-none {
+      display: block;
+    }
   }
 }
 
@@ -169,18 +174,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .br-none {
+  .production-main__br-none {
     display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .br-none {
+  .production-main__br-none {
     display: block;
   }
 
   .production-main__video {
     width: 688px;
     height: 455px;
+  }
+
+  .production-main__wrap {
+    display: flex;
+    flex-direction: column;
   }
 }
