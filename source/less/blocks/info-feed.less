@@ -1,0 +1,145 @@
+.info-feed {
+  width: 245px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    gap: 115px;
+    padding-top: 60px;
+    height: 244px;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+    margin: 0 auto;
+    height: 244px;
+    width: 988px;
+  }
+}
+
+.info-feed__legend {
+  position: relative;
+  padding-bottom: 2px;
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    top: 13px;
+    left: 60px;
+    background-image: url("../img/borderlayer.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 4px;
+    padding-left: 16px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 16px;
+  }
+}
+
+.info-feed__item {
+  padding-left: 0;
+  padding-top: 3px;
+  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 35px;
+    padding-left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -52px;
+  }
+}
+
+.info-feed__label {
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
+}
+
+.info-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid @basik-black;
+  width: 256px;
+  height: 44px;
+  font-size: 19px;
+  line-height: 18px;
+  color: @text-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -10px;
+    margin-left: 25px;
+    width: 404px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 608px;
+  }
+
+  &::placeholder {
+    color: @basik-black;
+    opacity: 0.3;
+    font-size: 17px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+
+    @media (min-width: @tablet-width) {
+
+      letter-spacing: 0.3px;
+      font-size: 19px;
+    }
+  }
+
+  &:hover {
+    border-bottom: 2px solid @basik-border;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @basik-border;
+    outline: none;
+  }
+}
+
+.info-feed__input--patronomic,
+.info-feed__input--famely {
+  @media (min-width: @tablet-width) {
+    width: 352px;
+    margin-left: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 558px;
+  }
+}
+
+.info-feed__label--personal {
+  font-weight: 700;
+}
+
+.info-feed__label--contacts {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @background-lightgreen;
+}

@@ -1,0 +1,46 @@
+.contacts-map {
+  margin-top: 37px;
+  width: 320px;
+  height: 455px;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
+.contacts-map__frame {
+  width: 320px;
+  height: 455px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 527px;
+    height: 457px;
+    margin-top: -21px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-map {
+    width: 767px;
+    height: 457px;
+    margin-top: -4px;
+    margin-bottom: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts-map {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-top: -34px;
+    margin-left: 24px;
+    height: 434px;
+    width: 527px;
+  }
+}

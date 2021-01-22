@@ -1,5 +1,5 @@
-document.querySelectorAll('.catalog__priselink').forEach((modalBasket) => {
-  modalBasket.addEventListener('click', function (evt) {
+document.querySelectorAll(".catalog__priselink").forEach((modalBasket) => {
+  modalBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalPopup.classList.add("modal-order--show");
   });
