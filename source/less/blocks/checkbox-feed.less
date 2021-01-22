@@ -61,7 +61,6 @@
   @media (min-width: @desktop-width) {
     width: 1121px;
     margin: 0 auto;
-    height: 170px;
   }
 }
 
@@ -72,7 +71,7 @@
   @media (min-width: @tablet-width) {
     background-color: @background-grey;
     margin: 0;
-    height: 254px;
+    min-height: 254px;
     padding-top: 50px;
     width: 100%;
     padding-left: 0;
@@ -83,7 +82,7 @@
     background-color: @background-grey;
     margin: 0;
     padding-top: 48px;
-    height: 180px;
+    min-height: 180px;
   }
 }
 
@@ -154,5 +153,6 @@
     grid-template-columns: repeat(3, min-content);
     column-gap: 81px;
     margin-left: 100px;
+    grid-template-rows: repeat(2, 1fr);
   }
 }
