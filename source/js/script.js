@@ -1,18 +1,19 @@
-let page = document.querySelector('.page-header__navigation');
-let toogle = document.querySelector('.header-nav__toggle');
-let navigation = document.querySelector('.header-nav__list');
-let navButton = document.querySelector('.header-nav__button');
-let modalBasket = document.querySelector('.catalog__priselink');
-let modalOrder = document.querySelector('.products-week__order');
-let modalPopup = document.querySelector('.modal-order');
+let page = document.querySelector(".page-header__navigation");
+let toogle = document.querySelector(".page-header__nav-toggle");
+let navigation = document.querySelector(".page-header__itemlist");
+let navButton = document.querySelector(".page-header__nav-button");
+let modalOrder = document.querySelector(".products-week__order");
+let modalPopup = document.querySelector(".modal-order");
+
+page.classList.remove("page-header__navigation--nojs");
 
 toogle.onclick = function() {
-  page.classList.toggle('page-header__navigation--close');
-  page.classList.toggle('page-header__navigation--active');
-  navigation.classList.toggle('header-nav__list--none');
-  navigation.classList.toggle('header-nav__list--block');
-  navButton.classList.toggle('header-nav__button--close');
-  navButton.classList.toggle('header-nav__button--active');
+  page.classList.toggle("page-header__navigation--close");
+  page.classList.toggle("page-header__navigation--active");
+  navigation.classList.toggle("page-header__itemlist--none");
+  navigation.classList.toggle("page-header__itemlist--block");
+  navButton.classList.toggle("page-header__nav-button--close");
+  navButton.classList.toggle("page-header__nav-button--active");
 }
 
 modalOrder.addEventListener("click", function (evt) {

@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <svg style="display: none">
       <symbol id="header-logo">
         <path d="M4.54732 26.3186C4.54732 22.8186 4.24733 19.4186 4.14733 15.9186C4.14733 15.6186 4.14733 15.2186 4.14733 14.9186C4.14733 15.0186 4.24732 15.1186 4.24732 15.3186C4.74732 16.7186 5.34732 18.0186 6.04732 19.2186C6.74732 20.4186 7.14732 21.8186 7.54732 23.1186C7.34732 23.3186 7.24733 23.5186 7.34733 23.7186C7.34733 23.9186 7.44732 23.9186 7.54732 24.0186C8.04732 24.5186 9.04733 24.2186 9.64733 24.0186C9.84733 23.9186 10.1473 23.8186 10.3473 23.6186C10.6473 23.4186 11.0473 23.0186 10.9473 22.6186C10.9473 22.5186 10.9473 22.4186 10.8473 22.4186C11.2473 21.3186 11.4473 20.2186 11.6473 19.1186C11.8473 17.9186 12.3473 16.8186 12.7473 15.6186C12.7473 16.1186 12.8473 16.6186 12.8473 17.2186C13.0473 19.3186 12.8473 21.5186 12.8473 23.6186C12.8473 24.3186 12.8473 25.0186 13.0473 25.7186C13.1473 26.0186 13.3473 27.2186 13.2473 27.3186C12.7473 27.8186 12.8473 28.4186 13.5473 28.5186C14.3473 28.7186 15.3473 28.4186 15.8473 27.9186C16.8473 27.0186 16.3473 25.5186 16.1473 24.3186C15.7473 22.3186 16.2473 20.1186 16.1473 18.1186C16.0473 15.8186 15.7473 13.6186 15.7473 11.3186C15.7473 9.51856 16.0473 7.61856 15.4473 5.81856C15.4473 5.61856 15.5473 5.41856 15.5473 5.21856C15.7473 4.31856 12.7473 4.81856 12.3473 5.61856C12.0473 5.81856 11.9473 6.11856 12.0473 6.41856C12.0473 6.51856 12.1473 6.51856 12.1473 6.61856C11.5473 9.31856 10.8473 11.9186 9.94733 14.5186C9.64733 15.5186 9.24733 16.5186 8.84733 17.5186C8.34733 16.6186 7.84733 15.6186 7.44733 14.7186C6.24733 11.8186 5.24733 8.91856 3.84733 6.11856C4.04733 4.81856 1.14732 4.91856 0.547324 6.11856C-0.152676 7.51856 -0.0526737 9.01856 0.147326 10.5186C0.447326 12.2186 0.447326 13.9186 0.447326 15.6186C0.447326 18.9186 0.747327 22.3186 0.847327 25.6186C0.547327 25.9186 0.447325 26.3186 0.747325 26.8186C0.847325 27.0186 1.04732 27.1186 1.24732 27.3186C2.44732 28.0186 4.54732 27.5186 4.54732 26.3186Z" fill="black"/>
@@ -58,67 +59,63 @@
       </symbol>
     </svg>
     <header class="page-header">
-      <div class="page-header__navigation page-header__navigation--close">
+      <div class="page-header__navigation page-header__navigation--actve page-header__navigation--nojs">
         <div class="page-header__nav">
           <a class="page-header__logo" href="">
-            <svg class="header__logo" width="86" height="35" viewBox="0 0 86 35">
-              <use xlink:href="#header-logo"></use>
-            </svg>
-            <svg class="header__logo-tablet" width="114" height="46" fill="none" xmlns="http://www.w3.org/2000/svg"  >
-              <use xlink:href="#header-logo-tablet"></use>
-            </svg>
-            <svg class="header__logo-desktop" width="149" height="72" viewBox="0 0 149 72" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="#header-logo-desktop"></use>
-            </svg>
+            <picture>
+              <source srcset="img/mishka-logo-desktop.svg" media="(min-width: 1150px)">
+              <source srcset="img/mishka-logo-tablet.svg" media="(min-width: 768px)">
+              <img class="page-header__logo-mobile" src="img/mishka-logo-mobile.svg" alt="Логотип интернет магазина Мишка" aria-label="Логотип интернет магазина вязанных игрушек Мишка">
+            </picture>
           </a>
-          <button class="header-nav__toggle header-nav--close">
-            <svg class="header-nav__button header-nav__button--close" viewBox="0 0 20 14" width="20" height="14">
+          <button class="page-header__nav-toggle page-header__nav-toggle--close">
+            <svg class="page-header__nav-button page-header__nav-button--close" viewBox="0 0 20 14" width="20" height="14">
               <use xlink:href="#header-toogle"></use>
             </svg>
             <span class="visually-hidden">Меню</span>
           </button>
         </div>
-        <nav class="header-nav">
-          <ul class="header-nav__list site-list header-nav__list--none no-bulites">
-            <li class="site-list__item site-list__item--catalog">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+        <nav class="page-header__menu">
+          <ul class="page-header__itemlist page-header__itemlist--none no-bulites">
+            <li class="page-header__itempart page-header__itempart--catalog">
+              <a class="page-header__itemlink" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-list__item site-list__item--knitting">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            <li class="page-header__itempart page-header__itempart--knitting">
+              <a class="page-header__itemlink" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="site-list__item site-list__item--search">
-              <a class="site-list__search" href="">
-                <svg class="site-list__itemsearch" width="18" height="18" viewBox="0 0 18 18">
+            <li class="page-header__itempart page-header__itempart--search">
+              <a class="page-header__itemsearch" href="">
+                <svg class="page-header__itempartsearch" width="18" height="18" viewBox="0 0 18 18">
                   <use xlink:href="#site-search"></use>
                 </svg>
-                <span class="site-list__search--span">Поиск по сайту</span>
+                <span class="page-header__itemsearch-span">Поиск по сайту</span>
               </a>
             </li>
-            <li class="site-list__item site-list__item--basket">
-              <a class="site-list__basket" href="">
-                <svg class="site-list__itembasket" width="21" height="18" viewBox="0 0 21 18">
+            <li class="page-header__itempart page-header__itempart--basket">
+              <a class="page-header__itembasket" href="">
+                <svg class="page-header__itempartbasket" width="21" height="18" viewBox="0 0 21 18">
                   <use xlink:href="#site-basket"></use>
                 </svg>
-                <span class="site-list__basketspan">Корзина: пока пуста</span>
+                <span class="page-header__itempartspan">Корзина: пока пуста</span>
               </a>
             </li>
-            <li class="site-list__item site-list__item--new">
-              <a class="site-list__link" href="">Новые поступления</a>
+            <li class="page-header__itempart page-header__itempart--new">
+              <a class="page-header__itemlink" href="">Новые поступления</a>
             </li>
-            <li class="site-list__item site-list__item--sale">
-              <a class="site-list__link" href="">Распродажа</a>
+            <li class="page-header__itempart page-header__itempart--sale">
+              <a class="page-header__itemlink" href="">Распродажа</a>
             </li>
           </ul>
-          <span class="header-nav--deleviry">Бесплатная доставка по России</span>
+          <span class="page-header__deleviry">Бесплатная доставка по России</span>
         </nav>
       </div>
       <div class="page-header__title-wrapper page-header__title-wrapper--container">
-        <h2 class="page-header__title">Милые штуки<br class="paragraphf-none">&nbsp;ручной<br>работы для дома<br></h2>
+        <h2 class="page-header__title">Милые штуки<br class="page-header__paragraphf-none">&nbsp;ручной<br>работы для дома</h2>
         <ul class="page-header__list no-bulites">
-          <li class="page-header-item page-header__item--subjects">
+          <li class="page-header__item">
             <a class="page-header__link page-header__link--subjects" href="">Предметы<br>интерьера</a>
           </li>
-          <li class="page-header-item page-header__item--plays">
+          <li class="page-header__item page-header__item-plays">
             <a class="page-header__link page-header__link--plays" href="">Детские<br>игрушки</a>
           </li>
         </ul>
@@ -126,12 +123,12 @@
     </header>
     <main class="page-main">
       <h2 class="visually-hidden">Категори Товаров</h2>
-      <section class="products">
+      <section class="products-week">
         <h2 class="visually-hidden">Карточка товара</h2>
-        <div class="products-week">
+        <div class="products-week__block">
           <div class="products-week__hidden">
             <h2 class="products-week__title">Вязаные корзинки</h2>
-            <span class="products-week__label">Товар <br class="paragraphf-none">&nbsp;недели</span>
+            <span class="products-week__label">Товар <br class="products-week__paragraphf-none">&nbsp;недели</span>
           </div>
           <div class="products-week__card">
             <p class="products-week__description">Экологически чистая пряжа,<br>
@@ -139,31 +136,31 @@
             </p>
             <table class="products-week__table specification-table">
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Цвет</td>
-                <td class="specification-table__cell">«Тиффани/серый»</td>
+                <td class="specification-table__cell specification-table__cell--line">Цвет:</td>
+                <td class="specification-table__cell">«Тиффани»/серый</td>
               </tr>
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Диаметр</td>
-                <td class="specification-table__cell">25см</td>
+                <td class="specification-table__cell specification-table__cell--line">Диаметр:</td>
+                <td class="specification-table__cell">25 см</td>
               </tr>
               <tr class="specification-table__row">
-                <td class="specification-table__cell">Высота</td>
-                <td class="specification-table__cell">15см</td>
+                <td class="specification-table__cell specification-table__cell--line">Высота:</td>
+                <td class="specification-table__cell">15 см</td>
               </tr>
             </table>
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
-              <source srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="products-week__image" src="img/triple-set-mobile.jpg"
-                srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
-            </picture>
+            <div class="products-week__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
+                <source srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="products-week__image" src="img/triple-set-mobile.jpg"
+                  srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+              </picture>
+            </div>
             <p class="products-week__price">Цена: 990 руб.</p>
-            <button class="products-week__order button-style" type="button">
-              <span class="button-style">Заказать</span>
-            </button>
+            <a class="products-week__order button-style" href="">Заказать</a>
           </div>
         </div>
       </section>
@@ -180,35 +177,33 @@
       </section>
       <section class="products-reviews">
         <h2 class="visually-hidden">Отзывы</h2>
-        <div class="pruduct-rewiews__block">
-          <p class="products-reviews__title">Отзывы</p>
-          <p class="products-reviews__text">
-            Я молодая мама, но всё равно<br class="text-none"> фотографии не набирали и близко<br class="text-none">
-            &nbsp;такого количества лайков, как <br class="text-none">у популярных инстамамочек.<br class="text-none">
-            &nbsp;В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br class="text-none">
-            и мои фотографии сразу стали<br class="text-none"> более стильными, а также<br class="text-none">
+        <div class="review-block">
+          <p class="review-block__title">Отзывы</p>
+          <p class="review-block__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко
+            такого количества лайков, как&nbsp;<br class="review-block__br review-block__br--desktop">у популярных инстамамочек.
+            &nbsp;<br class="review-block__br">В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+            <br class="review-block__br">и мои фотографии сразу стали более стильными, а также
             набирают больше лайков!
           </p>
-          <div class="pruduct-rewiews__signature">
-            <span class="pruduct-rewiews__user">Анастасия Красильникова</span>
-            <span class="products-reviews__login">@misssssiskras</span>
+          <div class="review-block__signature signature-block">
+            <span class="signature-block__user">Анастасия Красильникова</span>
+            <span class="signature-block__login">@misssssiskras</span>
           </div>
-          <div class="products-reviews__slide">
-            <button class="slide__left" type="button">
+          <div class="review-block__slide slide-block">
+            <button class="slide-block__left" type="button">
               <span class="visually-hidden">Отзыв влево</span>
             </button>
-            <button class="slide__right" type=button>
+            <button class="slide-block__right" type=button>
               <span class="visually-hidden">Отзыв вправо</span>
             </button>
           </div>
-          <button class="products-reviews__button button-style" type="button">
-            <span class="products-reviews__write">Написать</span>
-          </button>
+          <a class="review-block__button button-style" href="">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__heading">Контакты</h2>
-        <table class="contacts__table">
+        <table class="contacts__table contacts-table">
           <tr class="contacts-table__row contacts-table__row--email">
             <td class="contacts-table__cell">e-mail:</td>
             <td class="contacts-table__cell contacts-table__cell--email">info@mimimishkashop.ru</td>
@@ -221,12 +216,12 @@
         <p class="contacts-map">
           <iframe class="contacts-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         </p>
-        <button class="contacts__write button-style" type="button">Напишите нам</button>
+        <a class="contacts__write button-style" href="">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="socials">
-        <a class=socials__logo>
+        <a class=socials__logo href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Лого</span>
         </a>
         <ul class="socials__list no no-bulites">
@@ -246,7 +241,7 @@
             </a>
           </li>
         </ul>
-        <a class="copiright-developed" href="">Разработано</a>
+        <a class="copiright-developed" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">Разработано</a>
       </div>
     </footer>
     <div class="modal-order">
@@ -255,15 +250,15 @@
       <form action="https://echo.htmlacademy.ru" method="post" class="modal-form">
         <div class="modal-form__block checkbox-form">
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input" type="checkbox" name="small" id="small-field" value="small-size">
+            <input class="checkbox-form__input" type="radio" name="size" id="small-field" value="small-size" checked>
             <label class="checkbox-form__label" for="small-field">s</label>
           </div>
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input checkbox-form__input--medium" type="checkbox" name="medium" id="medium-field" value="medium-size">
+            <input class="checkbox-form__input checkbox-form__input--medium" type="radio" name="size" id="medium-field" value="medium-size">
             <label class="checkbox-form__label checkbox-form__label--medium" for="medium-field">m</label>
           </div>
           <div class="checkbox-form__block">
-            <input class="checkbox-form__input checkbox-form__input--large" type="checkbox" name="large" id="large-field" value="large-size">
+            <input class="checkbox-form__input checkbox-form__input--large" type="radio" name="size" id="large-field" value="large-size">
             <label class="checkbox-form__label checkbox-form__label--large" for="large-field">l</label>
           </div>
         </div>

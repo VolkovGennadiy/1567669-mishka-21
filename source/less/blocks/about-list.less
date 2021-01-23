@@ -1,0 +1,119 @@
+.about-list__item {
+  position: relative;
+  padding-top: 64px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -10px;
+    padding-bottom: 38px;
+  }
+}
+
+.about-list__item--ecology {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/icon-floor.svg");
+    top: 9px;
+    left: 8px;
+  }
+}
+
+.about-list__item--style {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-money.svg");
+    top: 29px;
+  }
+}
+
+.about-list__item--like {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icon-like.svg");
+    top: 34px;
+    left: 7px;
+  }
+}
+
+.about-list__item--love {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icon-love.svg");
+    top: 31px;
+    left: 3px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-top: -22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -30px;
+  }
+}
+
+.about-list__item--support {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icon-support.svg");
+    top: 32px;
+    left: -6px;
+  }
+}
+
+.about-list__item--present {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-present.svg");
+    top: 30px;
+    left: 3px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-list__item--support {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+}

@@ -1,0 +1,27 @@
+.specification-table__cell {
+  padding-top: 12px;
+  padding-right: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.specification-table__cell--line {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 260px;
+    height: 1px;
+    position: absolute;
+    background-image: url("../img/table-line.svg");
+    top: 45px;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 188px;
+      top: 47px;
+    }
+  }
+}

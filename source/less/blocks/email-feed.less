@@ -1,0 +1,122 @@
+.email-feed {
+  padding-top: 21px;
+  width: 245px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 94px;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 13px;
+    margin: 0 auto;
+    width: 997px;
+    padding-left: 54px;
+  }
+}
+
+.email-feed__legend {
+  position: relative;
+  padding-left: 1px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 16px;
+    padding-top: 15px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 1px;
+    top: 11px;
+    left: 78px;
+    background-image: url("../img/borderlayer.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.email-feed__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 21px;
+    background-image: url("../img/mail.svg");
+    left: 224px;
+    z-index: 1;
+    top: 16px;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      left: 462px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 624px;
+      top: 17px;
+    }
+  }
+}
+
+.email-feed__input {
+  font-family: "Open Sans", "Arial", sans-serif;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid @basik-black;
+  width: 256px;
+  padding-bottom: 12px;
+  margin-left: -1px;
+  font-size: 19px;
+  line-height: 18px;
+  color: @text-darkgrey;
+  margin-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @background-grey;
+    width: 479px;
+    padding-bottom: 13px;
+    margin-left: 15px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+    width: 680px;
+  }
+
+  &::placeholder {
+    color: @basik-black;
+    opacity: 0.3;
+    font-size: 17px;
+    z-index: -1;
+  }
+
+  &:hover {
+    border-bottom: 2px solid @basik-border;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @basik-border;
+    outline: none;
+  }
+}
+
+.email-feed__label--contacts {
+  display: none;
+}
