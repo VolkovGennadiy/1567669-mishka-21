@@ -1,6 +1,34 @@
 .contacts {
   position: relative;
   margin: 0 auto;
+<<<<<<< HEAD
+=======
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 6px;
+    background-image: url("../img/zigzag-mobile.svg");
+    left: 0;
+    top: 45px;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/zigzag-tablet.svg");
+      width: 768px;
+      height: 17px;
+      top: -87px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/zigzag-desktop.svg");
+      width: 1050px;
+      height: 24px;
+      top: -145px;
+      left: 52px;
+    }
+  }
+>>>>>>> 8177cf56904dfb52daeb808ed78367de60e1e5f7
 }
 
 .contacts__heading {
@@ -41,7 +69,11 @@
   .contacts {
     width: 768px;
     margin: 0 auto;
+<<<<<<< HEAD
     margin-top: 63px;
+=======
+    margin-top: 153px;
+>>>>>>> 8177cf56904dfb52daeb808ed78367de60e1e5f7
   }
 
   .contacts__write {

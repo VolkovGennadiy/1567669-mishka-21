@@ -93,6 +93,18 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
+// script add
+
+const scriptsadd = () => {
+  return gulp.src("source/js/modalcatalog.js")
+    .pipe(uglify())
+    .pipe(rename("modalcatalog.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptsadd = scriptsadd;
+
 // copy
 
 const copy = (done) => {
@@ -100,6 +112,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
+    "source/css/*.css",
   ], {
     base: "source"
   })
@@ -120,7 +133,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -136,6 +149,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/modalcatalog.js", gulp.series(scriptsadd));
   gulp.watch("source/*.html", gulp.series(html,));
 }
 
@@ -147,6 +161,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
+    scriptsadd,
     sprite,
     copy,
     images,
@@ -164,6 +179,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
+    scriptsadd,
     sprite,
     copy,
     createWebp
